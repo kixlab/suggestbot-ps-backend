@@ -1,0 +1,2708 @@
+[
+    {
+        "speaker": "A",
+        "starttime": 10.93,
+        "endtime": 64.32,
+        "text": "Okay. Oh, that's not gonna work. <sound: other> Oh, alright. <sound: other> Okay. Okay. Um"
+    },
+    {
+        "speaker": "D",
+        "starttime": 63.8,
+        "endtime": 64.54,
+        "text": "Uh, uh, um."
+    },
+    {
+        "speaker": "A",
+        "starttime": 64.32,
+        "endtime": 94.21,
+        "text": "alright. I'll just put that there. Uh as you all know we're here to create a brand new fantastic remote. Uh I'm Nick Debusk, I'm the Project Manager. Uh we'll just get started with everyone kind of letting each other know who they are and what you're doing, what your what your role is um. Go ahead."
+    },
+    {
+        "speaker": "D",
+        "starttime": 94.29,
+        "endtime": 138.13,
+        "text": "Okay. <sound: other> I am Corinne Whiting and I will be the Marketing Expert and in each of the three phases I will have a different role. In the function design phase I will be talking about user requirement specification, and this means what needs and desires are to be fulfilled, and I'll be doing research to figure this out. In the conceptual design phase I will be dealing with trend watching and I'll be doing marketing research on the web. And then finally in the um detailed design phase I will be doing product evaluation and so I will be collecting the requirements and ranking all the requirements to see how we did."
+    },
+    {
+        "speaker": "A",
+        "starttime": 138.82,
+        "endtime": 139.22,
+        "text": "'Kay."
+    },
+    {
+        "speaker": "C",
+        "starttime": 139.55,
+        "endtime": 172.24,
+        "text": "Hiya, I'm Ryan. Um I'm the User Interface Designer. Um likewise I've three different roles for each stage of design. Um the functional design is looking at the tex technical functions of a remote control. Um in the concept design, the user interface, how the user reacts with the the product. And the detailed design um <sound: other> sort of like the user interface design, what they might be looking for, uh things like fashions, what makes wha how we're gonna make it special. That's about it."
+    },
+    {
+        "speaker": "B",
+        "starttime": 172.464,
+        "endtime": 202.74,
+        "text": "<sound: other> Right. <sound: cough> I'm Manuel and I'm the Industrial Designer in in this project um. In the functional design phase I'm I'll be dealing mostly with the requirements, um we'll discuss what the prog what functions the the product has to fulfil and so and so on. Um I suppose we'll work pretty much together on that one. Um um in the conceptual design um I'll be pro mostly dealing with properties and materials um"
+    },
+    {
+        "speaker": "C",
+        "starttime": 202.18,
+        "endtime": 202.58,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "B",
+        "starttime": 202.74,
+        "endtime": 222.37,
+        "text": "of our product. And uh the detailed design in the detailed design I'll be concerned with the look and feel of the product itself, um so we're pretty much working together obviously on the design front here. Okay."
+    },
+    {
+        "speaker": "A",
+        "starttime": 221.21,
+        "endtime": 221.77,
+        "text": "Okay."
+    },
+    {
+        "speaker": "B",
+        "starttime": 222.37,
+        "endtime": 222.584,
+        "text": "<sound: other>"
+    },
+    {
+        "speaker": "A",
+        "starttime": 224.06,
+        "endtime": 233.71,
+        "text": "Um so we've got our opening, our our agenda is the opening, uh acquaintance which we've kinda done."
+    },
+    {
+        "speaker": "D",
+        "starttime": 233.549,
+        "endtime": 235.228,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "C",
+        "starttime": 233.656,
+        "endtime": 234.436,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "A",
+        "starttime": 233.71,
+        "endtime": 326.54,
+        "text": "Uh tool training, project plan discussion and then closing. Uh grand total of twenty five minutes we have here. Um so we are putting together a new remote control. Um we want it to be something original. Um of course we're a not only a electronics company but a fashion um conscious electronics company, so we want it to be trendy um and we want it to be easy to use. <sound: other> Um we've got the functional design, conceptual design and detailed design um which basically is is the three of you um. And w uh <sound: laugh> well um functional design um. Um do we have um any ideas of of <sound: other> maybe d let's just throw out some ideas of what kind of remote control we want to have, and then we can go into how we're gonna design it and and how we're gonna do the detailing on it."
+    },
+    {
+        "speaker": "C",
+        "starttime": 326.84,
+        "endtime": 333.32,
+        "text": "Yeah. Well uh s function of remote control is just just you know, change channels is its main function."
+    },
+    {
+        "speaker": "A",
+        "starttime": 333.56,
+        "endtime": 343.05,
+        "text": "So we want it to be um a T_V_ remote or I I mean do we want it to to do other things besides just be a a television remote?"
+    },
+    {
+        "speaker": "C",
+        "starttime": 343.25,
+        "endtime": 348.89,
+        "text": "Oh right. I suppose you c try make it a universal remote"
+    },
+    {
+        "speaker": "A",
+        "starttime": 348.59,
+        "endtime": 348.81,
+        "text": "'Kay."
+    },
+    {
+        "speaker": "C",
+        "starttime": 348.89,
+        "endtime": 356.43,
+        "text": "for could work on all sort of electrical products in in one person's house."
+    },
+    {
+        "speaker": "D",
+        "starttime": 356.11,
+        "endtime": 356.32,
+        "text": "Mm."
+    },
+    {
+        "speaker": "C",
+        "starttime": 356.43,
+        "endtime": 357.73,
+        "text": "But, you know, they all sorta"
+    },
+    {
+        "speaker": "B",
+        "starttime": 357.617,
+        "endtime": 358.211,
+        "text": "<sound: cough>"
+    },
+    {
+        "speaker": "C",
+        "starttime": 357.73,
+        "endtime": 361.57,
+        "text": "have the same role changing channels, volumes and then programming."
+    },
+    {
+        "speaker": "A",
+        "starttime": 361.79,
+        "endtime": 362.91,
+        "text": "Mm-hmm. 'Kay."
+    },
+    {
+        "speaker": "C",
+        "starttime": 365.94,
+        "endtime": 366.33,
+        "text": "I think"
+    },
+    {
+        "speaker": "B",
+        "starttime": 366.2,
+        "endtime": 366.45,
+        "text": "Mm."
+    },
+    {
+        "speaker": "C",
+        "starttime": 366.33,
+        "endtime": 372.02,
+        "text": "they all work on the same prin principle as well sorta like I don't actually know. <gap> But is it just infra-red? Is that standard?"
+    },
+    {
+        "speaker": "A",
+        "starttime": 372.74,
+        "endtime": 372.97,
+        "text": "I"
+    },
+    {
+        "speaker": "C",
+        "starttime": 372.9,
+        "endtime": 373.76,
+        "text": "Ye"
+    },
+    {
+        "speaker": "A",
+        "starttime": 372.97,
+        "endtime": 374.19,
+        "text": "I think yeah,"
+    },
+    {
+        "speaker": "C",
+        "starttime": 373.76,
+        "endtime": 374.04,
+        "text": "yeah."
+    },
+    {
+        "speaker": "A",
+        "starttime": 374.19,
+        "endtime": 379.44,
+        "text": "yeah, r universal remote. Um this is my first uh go-round"
+    },
+    {
+        "speaker": "D",
+        "starttime": 379.04,
+        "endtime": 379.13,
+        "text": "Huh."
+    },
+    {
+        "speaker": "A",
+        "starttime": 379.44,
+        "endtime": 381.17,
+        "text": "with creating a remote control,"
+    },
+    {
+        "speaker": "D",
+        "starttime": 380.438,
+        "endtime": 381.871,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "A",
+        "starttime": 381.17,
+        "endtime": 384.9,
+        "text": "so"
+    },
+    {
+        "speaker": "D",
+        "starttime": 382.544,
+        "endtime": 386.44,
+        "text": "<sound: laugh> Ours too."
+    },
+    {
+        "speaker": "C",
+        "starttime": 383.637,
+        "endtime": 384.27,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "A",
+        "starttime": 384.9,
+        "endtime": 386.42,
+        "text": "<sound: laugh> I think we're all in the same boat here."
+    },
+    {
+        "speaker": "D",
+        "starttime": 386.44,
+        "endtime": 386.625,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "A",
+        "starttime": 387.984,
+        "endtime": 388.87,
+        "text": "<sound: other> Um"
+    },
+    {
+        "speaker": "C",
+        "starttime": 391.44,
+        "endtime": 395.01,
+        "text": "Um one thing I thought of with the remote control is you always lose 'em."
+    },
+    {
+        "speaker": "A",
+        "starttime": 395.64,
+        "endtime": 396.18,
+        "text": "Okay."
+    },
+    {
+        "speaker": "D",
+        "starttime": 396.23,
+        "endtime": 396.52,
+        "text": "Mm."
+    },
+    {
+        "speaker": "C",
+        "starttime": 396.55,
+        "endtime": 398.13,
+        "text": "So if there's a g a way"
+    },
+    {
+        "speaker": "D",
+        "starttime": 397.95,
+        "endtime": 398.29,
+        "text": "Ch"
+    },
+    {
+        "speaker": "C",
+        "starttime": 398.13,
+        "endtime": 400.2,
+        "text": "of finding it quite easily,"
+    },
+    {
+        "speaker": "A",
+        "starttime": 400.16,
+        "endtime": 400.46,
+        "text": "So"
+    },
+    {
+        "speaker": "C",
+        "starttime": 400.2,
+        "endtime": 400.55,
+        "text": "I thought that'd"
+    },
+    {
+        "speaker": "A",
+        "starttime": 400.46,
+        "endtime": 400.6,
+        "text": "we"
+    },
+    {
+        "speaker": "C",
+        "starttime": 400.55,
+        "endtime": 400.61,
+        "text": "be"
+    },
+    {
+        "speaker": "A",
+        "starttime": 400.6,
+        "endtime": 400.93,
+        "text": "should"
+    },
+    {
+        "speaker": "C",
+        "starttime": 400.61,
+        "endtime": 401.01,
+        "text": "quite good"
+    },
+    {
+        "speaker": "A",
+        "starttime": 400.93,
+        "endtime": 401.12,
+        "text": "we"
+    },
+    {
+        "speaker": "C",
+        "starttime": 401.01,
+        "endtime": 401.16,
+        "text": "quite"
+    },
+    {
+        "speaker": "A",
+        "starttime": 401.12,
+        "endtime": 401.88,
+        "text": "should"
+    },
+    {
+        "speaker": "C",
+        "starttime": 401.16,
+        "endtime": 401.79,
+        "text": "a good feature."
+    },
+    {
+        "speaker": "A",
+        "starttime": 401.88,
+        "endtime": 404.45,
+        "text": "set our remote control up to where it has a uh"
+    },
+    {
+        "speaker": "D",
+        "starttime": 406.68,
+        "endtime": 408.41,
+        "text": "Like a tracking device?"
+    },
+    {
+        "speaker": "A",
+        "starttime": 407.43,
+        "endtime": 408.83,
+        "text": "like a tracking device"
+    },
+    {
+        "speaker": "D",
+        "starttime": 408.41,
+        "endtime": 408.664,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "C",
+        "starttime": 408.76,
+        "endtime": 408.86,
+        "text": "Oh"
+    },
+    {
+        "speaker": "A",
+        "starttime": 408.83,
+        "endtime": 409.8,
+        "text": "or"
+    },
+    {
+        "speaker": "C",
+        "starttime": 408.86,
+        "endtime": 410.75,
+        "text": "you can get those key"
+    },
+    {
+        "speaker": "A",
+        "starttime": 409.8,
+        "endtime": 410.97,
+        "text": "or like a a"
+    },
+    {
+        "speaker": "C",
+        "starttime": 410.75,
+        "endtime": 412.49,
+        "text": "well you could whistle or make a noise"
+    },
+    {
+        "speaker": "A",
+        "starttime": 412.37,
+        "endtime": 412.5,
+        "text": "It"
+    },
+    {
+        "speaker": "C",
+        "starttime": 412.49,
+        "endtime": 412.7,
+        "text": "and"
+    },
+    {
+        "speaker": "A",
+        "starttime": 412.5,
+        "endtime": 412.76,
+        "text": "makes"
+    },
+    {
+        "speaker": "C",
+        "starttime": 412.7,
+        "endtime": 412.93,
+        "text": "it'd"
+    },
+    {
+        "speaker": "A",
+        "starttime": 412.76,
+        "endtime": 413.34,
+        "text": "a noise,"
+    },
+    {
+        "speaker": "C",
+        "starttime": 412.93,
+        "endtime": 413.26,
+        "text": "beep."
+    },
+    {
+        "speaker": "A",
+        "starttime": 413.34,
+        "endtime": 413.97,
+        "text": "there's a button"
+    },
+    {
+        "speaker": "B",
+        "starttime": 413.81,
+        "endtime": 413.98,
+        "text": "Mm, mm."
+    },
+    {
+        "speaker": "A",
+        "starttime": 413.97,
+        "endtime": 415.55,
+        "text": "on the T_V_ that you press"
+    },
+    {
+        "speaker": "D",
+        "starttime": 415.22,
+        "endtime": 415.4,
+        "text": "Mm."
+    },
+    {
+        "speaker": "C",
+        "starttime": 415.52,
+        "endtime": 415.78,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "A",
+        "starttime": 415.55,
+        "endtime": 415.86,
+        "text": "and"
+    },
+    {
+        "speaker": "B",
+        "starttime": 416.39,
+        "endtime": 416.78,
+        "text": "Right."
+    },
+    {
+        "speaker": "A",
+        "starttime": 417.58,
+        "endtime": 417.85,
+        "text": "'Kay."
+    },
+    {
+        "speaker": "D",
+        "starttime": 417.92,
+        "endtime": 418.4,
+        "text": "Be good."
+    },
+    {
+        "speaker": "B",
+        "starttime": 419.41,
+        "endtime": 420.01,
+        "text": "So"
+    },
+    {
+        "speaker": "C",
+        "starttime": 422.66,
+        "endtime": 428.32,
+        "text": "Generally, all remotes are sort of quite similar in their appearance."
+    },
+    {
+        "speaker": "A",
+        "starttime": 428.68,
+        "endtime": 429.79,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "C",
+        "starttime": 429.52,
+        "endtime": 430.34,
+        "text": "Just long."
+    },
+    {
+        "speaker": "A",
+        "starttime": 429.79,
+        "endtime": 432.26,
+        "text": "Do we want so they're kinda like long and"
+    },
+    {
+        "speaker": "C",
+        "starttime": 432.231,
+        "endtime": 432.231,
+        "text": "<sound: other>"
+    },
+    {
+        "speaker": "A",
+        "starttime": 432.26,
+        "endtime": 433.48,
+        "text": "rectangular."
+    },
+    {
+        "speaker": "C",
+        "starttime": 432.79,
+        "endtime": 433.49,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "A",
+        "starttime": 433.48,
+        "endtime": 433.55,
+        "text": "Do"
+    },
+    {
+        "speaker": "C",
+        "starttime": 433.49,
+        "endtime": 433.84,
+        "text": "Black"
+    },
+    {
+        "speaker": "A",
+        "starttime": 433.55,
+        "endtime": 433.9,
+        "text": "we want"
+    },
+    {
+        "speaker": "C",
+        "starttime": 433.84,
+        "endtime": 434.18,
+        "text": "usually."
+    },
+    {
+        "speaker": "A",
+        "starttime": 433.9,
+        "endtime": 435.75,
+        "text": "something crazy? You know,"
+    },
+    {
+        "speaker": "C",
+        "starttime": 435.67,
+        "endtime": 436.14,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "A",
+        "starttime": 435.75,
+        "endtime": 437.04,
+        "text": "we want something new that's gonna"
+    },
+    {
+        "speaker": "D",
+        "starttime": 436.86,
+        "endtime": 437.17,
+        "text": "Lot more"
+    },
+    {
+        "speaker": "A",
+        "starttime": 437.04,
+        "endtime": 437.4,
+        "text": "stand"
+    },
+    {
+        "speaker": "D",
+        "starttime": 437.17,
+        "endtime": 438.18,
+        "text": "modern."
+    },
+    {
+        "speaker": "A",
+        "starttime": 437.4,
+        "endtime": 438.63,
+        "text": "out."
+    },
+    {
+        "speaker": "C",
+        "starttime": 438.56,
+        "endtime": 438.73,
+        "text": "I"
+    },
+    {
+        "speaker": "A",
+        "starttime": 438.63,
+        "endtime": 438.75,
+        "text": "A"
+    },
+    {
+        "speaker": "C",
+        "starttime": 438.73,
+        "endtime": 438.93,
+        "text": "think"
+    },
+    {
+        "speaker": "A",
+        "starttime": 438.75,
+        "endtime": 438.99,
+        "text": "m a"
+    },
+    {
+        "speaker": "C",
+        "starttime": 438.93,
+        "endtime": 439.17,
+        "text": "so."
+    },
+    {
+        "speaker": "A",
+        "starttime": 438.99,
+        "endtime": 441.51,
+        "text": "modern so our remote should"
+    },
+    {
+        "speaker": "C",
+        "starttime": 441.45,
+        "endtime": 441.62,
+        "text": "Maybe"
+    },
+    {
+        "speaker": "A",
+        "starttime": 441.51,
+        "endtime": 441.84,
+        "text": "be"
+    },
+    {
+        "speaker": "C",
+        "starttime": 441.62,
+        "endtime": 442.83,
+        "text": "sorta spherical or something."
+    },
+    {
+        "speaker": "B",
+        "starttime": 442.744,
+        "endtime": 443.616,
+        "text": "<sound: cough>"
+    },
+    {
+        "speaker": "C",
+        "starttime": 442.83,
+        "endtime": 443.98,
+        "text": "A ball."
+    },
+    {
+        "speaker": "D",
+        "starttime": 444.77,
+        "endtime": 446.62,
+        "text": "Maybe like user-friendly, like a little"
+    },
+    {
+        "speaker": "C",
+        "starttime": 447.13,
+        "endtime": 447.54,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "D",
+        "starttime": 447.99,
+        "endtime": 450.45,
+        "text": "you know, where you can use both hands, like a little keyboard type"
+    },
+    {
+        "speaker": "C",
+        "starttime": 450.25,
+        "endtime": 451.05,
+        "text": "People"
+    },
+    {
+        "speaker": "D",
+        "starttime": 450.45,
+        "endtime": 450.73,
+        "text": "thing."
+    },
+    {
+        "speaker": "B",
+        "starttime": 450.95,
+        "endtime": 451.35,
+        "text": "Mm."
+    },
+    {
+        "speaker": "C",
+        "starttime": 451.05,
+        "endtime": 458.87,
+        "text": "I thought maybe, because people always tend to throw a remote control about the place to one another if it was in a ball, and"
+    },
+    {
+        "speaker": "A",
+        "starttime": 458.87,
+        "endtime": 459.58,
+        "text": "'Kay."
+    },
+    {
+        "speaker": "C",
+        "starttime": 458.87,
+        "endtime": 460.79,
+        "text": "maybe the actual controls are inside or something."
+    },
+    {
+        "speaker": "D",
+        "starttime": 461.61,
+        "endtime": 461.77,
+        "text": "Mm."
+    },
+    {
+        "speaker": "A",
+        "starttime": 462.17,
+        "endtime": 462.45,
+        "text": "Um."
+    },
+    {
+        "speaker": "B",
+        "starttime": 462.5,
+        "endtime": 468.92,
+        "text": "Well there are of course certain restrictions, you can't have it be any form and fulfil all functions at the"
+    },
+    {
+        "speaker": "C",
+        "starttime": 468.84,
+        "endtime": 469.12,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "B",
+        "starttime": 468.92,
+        "endtime": 483.02,
+        "text": "same time, so there are always the some restrictions we have to apply here. Um however um one question is how stable is that thing supposed to be, that refers to the material, pretty much um."
+    },
+    {
+        "speaker": "D",
+        "starttime": 482.58,
+        "endtime": 482.89,
+        "text": "Mm."
+    },
+    {
+        "speaker": "B",
+        "starttime": 483.02,
+        "endtime": 495.5,
+        "text": "What are we gonna build that thing out of? How sturdy is it gonna be? Do we want it to last longer or rather have people whatever,"
+    },
+    {
+        "speaker": "A",
+        "starttime": 495.376,
+        "endtime": 495.68,
+        "text": "<sound: other> Okay"
+    },
+    {
+        "speaker": "B",
+        "starttime": 495.5,
+        "endtime": 495.75,
+        "text": "have"
+    },
+    {
+        "speaker": "A",
+        "starttime": 495.68,
+        "endtime": 496.72,
+        "text": "so"
+    },
+    {
+        "speaker": "B",
+        "starttime": 495.75,
+        "endtime": 496.94,
+        "text": "to buy one"
+    },
+    {
+        "speaker": "A",
+        "starttime": 496.72,
+        "endtime": 497.0,
+        "text": "yeah,"
+    },
+    {
+        "speaker": "B",
+        "starttime": 496.94,
+        "endtime": 497.3,
+        "text": "every"
+    },
+    {
+        "speaker": "A",
+        "starttime": 497.0,
+        "endtime": 497.2,
+        "text": "so"
+    },
+    {
+        "speaker": "C",
+        "starttime": 497.15,
+        "endtime": 497.42,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "A",
+        "starttime": 497.2,
+        "endtime": 497.32,
+        "text": "we"
+    },
+    {
+        "speaker": "B",
+        "starttime": 497.3,
+        "endtime": 497.51,
+        "text": "half"
+    },
+    {
+        "speaker": "A",
+        "starttime": 497.32,
+        "endtime": 497.52,
+        "text": "want"
+    },
+    {
+        "speaker": "B",
+        "starttime": 497.51,
+        "endtime": 497.55,
+        "text": "a"
+    },
+    {
+        "speaker": "A",
+        "starttime": 497.52,
+        "endtime": 497.59,
+        "text": "it"
+    },
+    {
+        "speaker": "B",
+        "starttime": 497.55,
+        "endtime": 497.94,
+        "text": "year?"
+    },
+    {
+        "speaker": "A",
+        "starttime": 497.59,
+        "endtime": 506.79,
+        "text": "to be sturdy, we want it to to hold up to somebody's child, you know, throwing it across the room or, as you said, people kinda throw it, so"
+    },
+    {
+        "speaker": "C",
+        "starttime": 506.33,
+        "endtime": 506.64,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "A",
+        "starttime": 506.79,
+        "endtime": 511.26,
+        "text": "ball-shaped, uh you know, if it were ball-shaped maybe,"
+    },
+    {
+        "speaker": "C",
+        "starttime": 511.16,
+        "endtime": 511.34,
+        "text": "It could"
+    },
+    {
+        "speaker": "A",
+        "starttime": 511.26,
+        "endtime": 511.37,
+        "text": "then"
+    },
+    {
+        "speaker": "C",
+        "starttime": 511.34,
+        "endtime": 511.43,
+        "text": "be"
+    },
+    {
+        "speaker": "A",
+        "starttime": 511.37,
+        "endtime": 511.47,
+        "text": "it"
+    },
+    {
+        "speaker": "C",
+        "starttime": 511.43,
+        "endtime": 514.33,
+        "text": "cased on the outside and t everything could be inside."
+    },
+    {
+        "speaker": "A",
+        "starttime": 514.46,
+        "endtime": 591.13,
+        "text": "'Kay. Um so we want it to be modern, fun, sturdy, um So our form and our function. Um we want it to be um easy to find. <sound: laugh> Um <sound: other> What else it what else do we want it to to do? So we want it to be universal. It's something that we're supposed to sell for about twenty five Euros um and you know, goals for profits are I think somewhere around uh fifty million Euros, what they wanna make on it, so."
+    },
+    {
+        "speaker": "D",
+        "starttime": 591.24,
+        "endtime": 603.73,
+        "text": "Mm. Also since we're partners of the International Remote Control Association, maybe we wanna make it something that would globally appeal."
+    },
+    {
+        "speaker": "A",
+        "starttime": 604.37,
+        "endtime": 604.73,
+        "text": "'Kay."
+    },
+    {
+        "speaker": "D",
+        "starttime": 605.43,
+        "endtime": 608.23,
+        "text": "That's more on the research end, but the marketing."
+    },
+    {
+        "speaker": "A",
+        "starttime": 609.92,
+        "endtime": 625.11,
+        "text": "So marketing, you know, how maybe uh marketing, you could s find out what is the most universally um appealing <sound: laugh> remote control"
+    },
+    {
+        "speaker": "D",
+        "starttime": 624.609,
+        "endtime": 624.609,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "A",
+        "starttime": 625.11,
+        "endtime": 625.62,
+        "text": "out there."
+    },
+    {
+        "speaker": "D",
+        "starttime": 625.67,
+        "endtime": 625.98,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "B",
+        "starttime": 627.544,
+        "endtime": 628.244,
+        "text": "<sound: cough>"
+    },
+    {
+        "speaker": "D",
+        "starttime": 627.66,
+        "endtime": 633.95,
+        "text": "And maybe as far as design goes, maybe we could have different ones for different target audiences,"
+    },
+    {
+        "speaker": "A",
+        "starttime": 633.83,
+        "endtime": 634.23,
+        "text": "'Kay."
+    },
+    {
+        "speaker": "D",
+        "starttime": 633.95,
+        "endtime": 634.49,
+        "text": "'cause maybe"
+    },
+    {
+        "speaker": "C",
+        "starttime": 634.46,
+        "endtime": 634.57,
+        "text": "Ye"
+    },
+    {
+        "speaker": "D",
+        "starttime": 634.49,
+        "endtime": 636.51,
+        "text": "one won't apply to"
+    },
+    {
+        "speaker": "C",
+        "starttime": 636.06,
+        "endtime": 636.48,
+        "text": "Small."
+    },
+    {
+        "speaker": "D",
+        "starttime": 636.51,
+        "endtime": 638.4,
+        "text": "all of the countries we're targeting."
+    },
+    {
+        "speaker": "B",
+        "starttime": 640.04,
+        "endtime": 640.57,
+        "text": "Right."
+    },
+    {
+        "speaker": "A",
+        "starttime": 650.33,
+        "endtime": 677.18,
+        "text": "Um <sound: other> Do you guys have any ideas for what it should look like? Maybe we could draw it up on the on the board over there. Some ideas? We want it to be a b"
+    },
+    {
+        "speaker": "C",
+        "starttime": 677.008,
+        "endtime": 677.008,
+        "text": "<gap>"
+    },
+    {
+        "speaker": "A",
+        "starttime": 677.18,
+        "endtime": 678.65,
+        "text": "a ball,"
+    },
+    {
+        "speaker": "C",
+        "starttime": 677.74,
+        "endtime": 679.1,
+        "text": "I'd I could draw"
+    },
+    {
+        "speaker": "A",
+        "starttime": 678.65,
+        "endtime": 679.12,
+        "text": "you know,"
+    },
+    {
+        "speaker": "C",
+        "starttime": 679.1,
+        "endtime": 679.26,
+        "text": "sorta"
+    },
+    {
+        "speaker": "A",
+        "starttime": 679.12,
+        "endtime": 679.27,
+        "text": "we'll"
+    },
+    {
+        "speaker": "C",
+        "starttime": 679.26,
+        "endtime": 679.34,
+        "text": "the"
+    },
+    {
+        "speaker": "A",
+        "starttime": 679.27,
+        "endtime": 679.58,
+        "text": "draw"
+    },
+    {
+        "speaker": "C",
+        "starttime": 679.34,
+        "endtime": 679.6,
+        "text": "ball"
+    },
+    {
+        "speaker": "A",
+        "starttime": 679.58,
+        "endtime": 679.71,
+        "text": "up"
+    },
+    {
+        "speaker": "C",
+        "starttime": 679.6,
+        "endtime": 679.97,
+        "text": "idea."
+    },
+    {
+        "speaker": "A",
+        "starttime": 679.71,
+        "endtime": 684.14,
+        "text": "we'll draw up the ball and maybe th um where the buttons are located."
+    },
+    {
+        "speaker": "C",
+        "starttime": 689.07,
+        "endtime": 716.03,
+        "text": "My original idea was just simply sort of a sphere, where maybe you this is where it's connected together, and then when you open it out, it could fol it could be maybe flip, like a flip phone, and then when you fold it out the middle Maybe a hinge that'll have to be the strongest part of it. If that if we did use a hinge, or if it was just two parts,"
+    },
+    {
+        "speaker": "B",
+        "starttime": 715.472,
+        "endtime": 716.603,
+        "text": "<sound: cough>"
+    },
+    {
+        "speaker": "C",
+        "starttime": 716.03,
+        "endtime": 745.06,
+        "text": "and then you'd have just sorta you you you know, your buttons. Thing is inside I think, sometimes remotes have too many buttons, so maybe as simple as possible, um as few buttons inside as possible. Um, I dunno, what's the idea for. Just something maybe if you ha if it had like if some kind of like light or something or lights around it. It's looking a bit like something out of Star Wars at the moment though,"
+    },
+    {
+        "speaker": "D",
+        "starttime": 744.752,
+        "endtime": 745.552,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "C",
+        "starttime": 745.06,
+        "endtime": 746.18,
+        "text": "to be fair."
+    },
+    {
+        "speaker": "A",
+        "starttime": 746.064,
+        "endtime": 747.712,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "C",
+        "starttime": 746.18,
+        "endtime": 746.73,
+        "text": "<sound: laugh> But yeah."
+    },
+    {
+        "speaker": "D",
+        "starttime": 746.51,
+        "endtime": 748.8,
+        "text": "Futuristic. <sound: other>"
+    },
+    {
+        "speaker": "C",
+        "starttime": 748.76,
+        "endtime": 748.89,
+        "text": "That"
+    },
+    {
+        "speaker": "B",
+        "starttime": 748.804,
+        "endtime": 749.547,
+        "text": "<sound: cough>"
+    },
+    {
+        "speaker": "C",
+        "starttime": 748.89,
+        "endtime": 750.76,
+        "text": "was that was a sorta simple idea I had"
+    },
+    {
+        "speaker": "A",
+        "starttime": 750.15,
+        "endtime": 750.52,
+        "text": "Uh-huh."
+    },
+    {
+        "speaker": "C",
+        "starttime": 750.76,
+        "endtime": 760.86,
+        "text": "and then you know you could <gap> about Right, it would almost be like a ball. So that was just just an idea I had. I don't know whether anybody else has other ideas?"
+    },
+    {
+        "speaker": "B",
+        "starttime": 761.55,
+        "endtime": 767.1,
+        "text": "Right. One problem you'd get with this design is um the ball is a nice idea because of it's stability"
+    },
+    {
+        "speaker": "C",
+        "starttime": 767.04,
+        "endtime": 767.26,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "B",
+        "starttime": 767.1,
+        "endtime": 771.08,
+        "text": "really, but of course, since it's a ball, it'll roll, so"
+    },
+    {
+        "speaker": "C",
+        "starttime": 770.95,
+        "endtime": 771.19,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "B",
+        "starttime": 771.08,
+        "endtime": 772.92,
+        "text": "we'd have to have it flat on one"
+    },
+    {
+        "speaker": "C",
+        "starttime": 772.76,
+        "endtime": 772.96,
+        "text": "Maybe"
+    },
+    {
+        "speaker": "B",
+        "starttime": 772.92,
+        "endtime": 773.23,
+        "text": "side"
+    },
+    {
+        "speaker": "C",
+        "starttime": 772.96,
+        "endtime": 773.46,
+        "text": "f yeah."
+    },
+    {
+        "speaker": "B",
+        "starttime": 773.23,
+        "endtime": 778.81,
+        "text": "at least, down here somewhere, take away that part. That's one of the big issues."
+    },
+    {
+        "speaker": "C",
+        "starttime": 778.62,
+        "endtime": 778.81,
+        "text": "Yeah,"
+    },
+    {
+        "speaker": "B",
+        "starttime": 778.81,
+        "endtime": 779.66,
+        "text": "Also"
+    },
+    {
+        "speaker": "C",
+        "starttime": 778.81,
+        "endtime": 779.76,
+        "text": "that's g that's a good idea."
+    },
+    {
+        "speaker": "B",
+        "starttime": 779.66,
+        "endtime": 781.58,
+        "text": "also you risk the hinges here."
+    },
+    {
+        "speaker": "C",
+        "starttime": 781.43,
+        "endtime": 782.42,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "B",
+        "starttime": 781.58,
+        "endtime": 782.56,
+        "text": "That's that's um"
+    },
+    {
+        "speaker": "C",
+        "starttime": 782.42,
+        "endtime": 782.56,
+        "text": "The"
+    },
+    {
+        "speaker": "B",
+        "starttime": 782.56,
+        "endtime": 782.66,
+        "text": "a"
+    },
+    {
+        "speaker": "C",
+        "starttime": 782.56,
+        "endtime": 782.78,
+        "text": "idea"
+    },
+    {
+        "speaker": "B",
+        "starttime": 782.66,
+        "endtime": 783.08,
+        "text": "problem."
+    },
+    {
+        "speaker": "C",
+        "starttime": 782.78,
+        "endtime": 784.38,
+        "text": "it didn't have to necessarily be f"
+    },
+    {
+        "speaker": "B",
+        "starttime": 784.272,
+        "endtime": 784.272,
+        "text": "<sound: other>"
+    },
+    {
+        "speaker": "C",
+        "starttime": 784.38,
+        "endtime": 785.4,
+        "text": "a hinge, that"
+    },
+    {
+        "speaker": "B",
+        "starttime": 785.31,
+        "endtime": 787.44,
+        "text": "That's"
+    },
+    {
+        "speaker": "C",
+        "starttime": 785.4,
+        "endtime": 786.44,
+        "text": "was just one idea though."
+    },
+    {
+        "speaker": "B",
+        "starttime": 787.44,
+        "endtime": 792.19,
+        "text": "that's <sound: other> interesting of course, but that's of course a weak point, yeah."
+    },
+    {
+        "speaker": "C",
+        "starttime": 791.98,
+        "endtime": 792.37,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "D",
+        "starttime": 794.144,
+        "endtime": 797.104,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "A",
+        "starttime": 803.64,
+        "endtime": 817.05,
+        "text": "How would we go about um making you know getting rid of our weak points? What I mean would we just have a flat spot on the bottom of the ball?"
+    },
+    {
+        "speaker": "D",
+        "starttime": 814.64,
+        "endtime": 816.525,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "C",
+        "starttime": 814.81,
+        "endtime": 815.856,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "A",
+        "starttime": 817.05,
+        "endtime": 817.5,
+        "text": "<sound: laugh> Not to put"
+    },
+    {
+        "speaker": "B",
+        "starttime": 817.324,
+        "endtime": 817.324,
+        "text": "<sound: other>"
+    },
+    {
+        "speaker": "A",
+        "starttime": 817.5,
+        "endtime": 818.91,
+        "text": "you on the spot,"
+    },
+    {
+        "speaker": "B",
+        "starttime": 818.26,
+        "endtime": 818.91,
+        "text": "E No"
+    },
+    {
+        "speaker": "A",
+        "starttime": 818.91,
+        "endtime": 819.5,
+        "text": "but"
+    },
+    {
+        "speaker": "B",
+        "starttime": 818.91,
+        "endtime": 820.33,
+        "text": "no, uh uh <sound: cough>."
+    },
+    {
+        "speaker": "A",
+        "starttime": 822.44,
+        "endtime": 823.11,
+        "text": "What did you say your"
+    },
+    {
+        "speaker": "B",
+        "starttime": 823.08,
+        "endtime": 823.25,
+        "text": "N"
+    },
+    {
+        "speaker": "A",
+        "starttime": 823.11,
+        "endtime": 823.4,
+        "text": "title"
+    },
+    {
+        "speaker": "B",
+        "starttime": 823.25,
+        "endtime": 823.81,
+        "text": "n"
+    },
+    {
+        "speaker": "A",
+        "starttime": 823.4,
+        "endtime": 824.1,
+        "text": "was again?"
+    },
+    {
+        "speaker": "D",
+        "starttime": 823.934,
+        "endtime": 825.78,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "B",
+        "starttime": 825.03,
+        "endtime": 825.74,
+        "text": "Uh, I'm your"
+    },
+    {
+        "speaker": "A",
+        "starttime": 825.41,
+        "endtime": 826.3,
+        "text": "You're the"
+    },
+    {
+        "speaker": "B",
+        "starttime": 825.74,
+        "endtime": 827.69,
+        "text": "Industrial Designer,"
+    },
+    {
+        "speaker": "A",
+        "starttime": 826.3,
+        "endtime": 827.18,
+        "text": "the Industrial"
+    },
+    {
+        "speaker": "D",
+        "starttime": 827.048,
+        "endtime": 828.233,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "A",
+        "starttime": 827.18,
+        "endtime": 828.19,
+        "text": "Designer."
+    },
+    {
+        "speaker": "B",
+        "starttime": 827.69,
+        "endtime": 829.88,
+        "text": "so i"
+    },
+    {
+        "speaker": "A",
+        "starttime": 829.769,
+        "endtime": 831.57,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "B",
+        "starttime": 829.88,
+        "endtime": 845.65,
+        "text": "b well, the point is that <sound: other> well maybe I dunno. The shape is perhaps not the most ideal."
+    },
+    {
+        "speaker": "A",
+        "starttime": 845.28,
+        "endtime": 845.6,
+        "text": "Okay."
+    },
+    {
+        "speaker": "B",
+        "starttime": 845.65,
+        "endtime": 851.46,
+        "text": "As as stable as it is, there must be a compromise between um"
+    },
+    {
+        "speaker": "C",
+        "starttime": 850.47,
+        "endtime": 852.19,
+        "text": "Well I I suppose that things become"
+    },
+    {
+        "speaker": "B",
+        "starttime": 851.46,
+        "endtime": 852.37,
+        "text": "stability"
+    },
+    {
+        "speaker": "C",
+        "starttime": 852.19,
+        "endtime": 853.56,
+        "text": "<gap> design."
+    },
+    {
+        "speaker": "B",
+        "starttime": 852.37,
+        "endtime": 853.23,
+        "text": "and design"
+    },
+    {
+        "speaker": "D",
+        "starttime": 853.14,
+        "endtime": 853.45,
+        "text": "Mm-hmm."
+    },
+    {
+        "speaker": "B",
+        "starttime": 853.23,
+        "endtime": 853.8,
+        "text": "here,"
+    },
+    {
+        "speaker": "C",
+        "starttime": 853.56,
+        "endtime": 853.8,
+        "text": "But I"
+    },
+    {
+        "speaker": "B",
+        "starttime": 853.8,
+        "endtime": 854.05,
+        "text": "so."
+    },
+    {
+        "speaker": "C",
+        "starttime": 853.8,
+        "endtime": 854.08,
+        "text": "mean i"
+    },
+    {
+        "speaker": "D",
+        "starttime": 854.496,
+        "endtime": 854.992,
+        "text": "<sound: cough>"
+    },
+    {
+        "speaker": "C",
+        "starttime": 855.0,
+        "endtime": 860.39,
+        "text": "I was trying to think of like the design of others. I can't think of anything other than a long rectangle"
+    },
+    {
+        "speaker": "A",
+        "starttime": 859.712,
+        "endtime": 860.144,
+        "text": "<sound: other>"
+    },
+    {
+        "speaker": "C",
+        "starttime": 860.39,
+        "endtime": 863.12,
+        "text": "for remote, maybe small, sort of fatter ones, but"
+    },
+    {
+        "speaker": "A",
+        "starttime": 862.99,
+        "endtime": 863.4,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "C",
+        "starttime": 863.12,
+        "endtime": 866.14,
+        "text": "there's nothing being done sort of out of left"
+    },
+    {
+        "speaker": "A",
+        "starttime": 865.98,
+        "endtime": 866.15,
+        "text": "It's"
+    },
+    {
+        "speaker": "C",
+        "starttime": 866.14,
+        "endtime": 867.02,
+        "text": "field,"
+    },
+    {
+        "speaker": "A",
+        "starttime": 866.15,
+        "endtime": 867.06,
+        "text": "not new, it's not"
+    },
+    {
+        "speaker": "C",
+        "starttime": 867.02,
+        "endtime": 867.29,
+        "text": "yeah."
+    },
+    {
+        "speaker": "A",
+        "starttime": 867.06,
+        "endtime": 870.43,
+        "text": "innovative, it's you know, everybody does long remote because it's"
+    },
+    {
+        "speaker": "C",
+        "starttime": 870.25,
+        "endtime": 870.56,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "A",
+        "starttime": 870.43,
+        "endtime": 873.88,
+        "text": "easy, it's it's stable um."
+    },
+    {
+        "speaker": "D",
+        "starttime": 876.06,
+        "endtime": 878.34,
+        "text": "'Kay, I'll draw something."
+    },
+    {
+        "speaker": "A",
+        "starttime": 877.3,
+        "endtime": 879.29,
+        "text": "So if"
+    },
+    {
+        "speaker": "D",
+        "starttime": 878.34,
+        "endtime": 882.14,
+        "text": "<sound: laugh> What?"
+    },
+    {
+        "speaker": "A",
+        "starttime": 879.29,
+        "endtime": 880.25,
+        "text": "<sound: laugh> no, go ahead."
+    },
+    {
+        "speaker": "D",
+        "starttime": 882.14,
+        "endtime": 890.5,
+        "text": "<sound: laugh> My idea was just to have it be kind of like a keyboard type shape, you know, like video"
+    },
+    {
+        "speaker": "C",
+        "starttime": 890.26,
+        "endtime": 890.54,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "D",
+        "starttime": 890.5,
+        "endtime": 904.63,
+        "text": "games l so. But maybe I mean that would be kinda big and bulky. We could also try to do the hinge thing, so it could like flip out that way. I don't know. <sound: laugh> That's my idea."
+    },
+    {
+        "speaker": "C",
+        "starttime": 905.45,
+        "endtime": 907.44,
+        "text": "I think definitely doing something different"
+    },
+    {
+        "speaker": "D",
+        "starttime": 907.7,
+        "endtime": 908.09,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "C",
+        "starttime": 908.7,
+        "endtime": 909.49,
+        "text": "is a good idea."
+    },
+    {
+        "speaker": "B",
+        "starttime": 921.04,
+        "endtime": 921.22,
+        "text": "Mm."
+    },
+    {
+        "speaker": "C",
+        "starttime": 922.18,
+        "endtime": 933.34,
+        "text": "I mean maybe design something, that's sort of like <sound: other> uh I suppose not everybody's everybody's hand's the same, but something that would maybe fit in the hand easier."
+    },
+    {
+        "speaker": "A",
+        "starttime": 933.48,
+        "endtime": 933.77,
+        "text": "Something"
+    },
+    {
+        "speaker": "D",
+        "starttime": 933.59,
+        "endtime": 934.62,
+        "text": "Mm."
+    },
+    {
+        "speaker": "A",
+        "starttime": 933.77,
+        "endtime": 934.57,
+        "text": "with a grip."
+    },
+    {
+        "speaker": "C",
+        "starttime": 934.55,
+        "endtime": 934.76,
+        "text": "Yeah,"
+    },
+    {
+        "speaker": "D",
+        "starttime": 934.62,
+        "endtime": 934.96,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "C",
+        "starttime": 934.76,
+        "endtime": 935.44,
+        "text": "with a grip."
+    },
+    {
+        "speaker": "A",
+        "starttime": 939.154,
+        "endtime": 943.73,
+        "text": "<sound: other> Yeah. Because even I suppose even with the ball"
+    },
+    {
+        "speaker": "C",
+        "starttime": 944.44,
+        "endtime": 945.52,
+        "text": "It still might be hard to"
+    },
+    {
+        "speaker": "A",
+        "starttime": 945.49,
+        "endtime": 946.02,
+        "text": "it's"
+    },
+    {
+        "speaker": "C",
+        "starttime": 945.52,
+        "endtime": 946.11,
+        "text": "it still not"
+    },
+    {
+        "speaker": "A",
+        "starttime": 946.02,
+        "endtime": 946.31,
+        "text": "it might"
+    },
+    {
+        "speaker": "C",
+        "starttime": 946.11,
+        "endtime": 946.9,
+        "text": "the ho"
+    },
+    {
+        "speaker": "A",
+        "starttime": 946.31,
+        "endtime": 947.02,
+        "text": "not be the easiest"
+    },
+    {
+        "speaker": "C",
+        "starttime": 946.9,
+        "endtime": 947.22,
+        "text": "easiest"
+    },
+    {
+        "speaker": "A",
+        "starttime": 947.02,
+        "endtime": 947.33,
+        "text": "to hold"
+    },
+    {
+        "speaker": "C",
+        "starttime": 947.22,
+        "endtime": 947.37,
+        "text": "thing"
+    },
+    {
+        "speaker": "A",
+        "starttime": 947.33,
+        "endtime": 948.75,
+        "text": "onto"
+    },
+    {
+        "speaker": "C",
+        "starttime": 947.37,
+        "endtime": 947.97,
+        "text": "to hold, yeah."
+    },
+    {
+        "speaker": "A",
+        "starttime": 948.75,
+        "endtime": 949.35,
+        "text": "um."
+    },
+    {
+        "speaker": "B",
+        "starttime": 948.85,
+        "endtime": 948.89,
+        "text": "Mm."
+    },
+    {
+        "speaker": "A",
+        "starttime": 951.7,
+        "endtime": 955.79,
+        "text": "So perhaps the the joystick"
+    },
+    {
+        "speaker": "C",
+        "starttime": 955.34,
+        "endtime": 956.05,
+        "text": "Like"
+    },
+    {
+        "speaker": "A",
+        "starttime": 955.79,
+        "endtime": 956.33,
+        "text": "the"
+    },
+    {
+        "speaker": "C",
+        "starttime": 956.05,
+        "endtime": 956.33,
+        "text": "yeah."
+    },
+    {
+        "speaker": "A",
+        "starttime": 956.33,
+        "endtime": 964.84,
+        "text": "the keyboard idea might work better. But then again, people like to use one hand to flip and one hand to hold their soda,"
+    },
+    {
+        "speaker": "D",
+        "starttime": 964.56,
+        "endtime": 964.56,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "C",
+        "starttime": 964.79,
+        "endtime": 965.03,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "A",
+        "starttime": 964.84,
+        "endtime": 966.7,
+        "text": "so maybe"
+    },
+    {
+        "speaker": "D",
+        "starttime": 965.44,
+        "endtime": 965.63,
+        "text": "True."
+    },
+    {
+        "speaker": "A",
+        "starttime": 966.7,
+        "endtime": 967.07,
+        "text": "maybe"
+    },
+    {
+        "speaker": "C",
+        "starttime": 967.01,
+        "endtime": 967.15,
+        "text": "It's"
+    },
+    {
+        "speaker": "A",
+        "starttime": 967.07,
+        "endtime": 967.25,
+        "text": "we"
+    },
+    {
+        "speaker": "C",
+        "starttime": 967.15,
+        "endtime": 970.76,
+        "text": "d yeah. I think it's definitely got to be a a one-handed"
+    },
+    {
+        "speaker": "D",
+        "starttime": 970.28,
+        "endtime": 970.69,
+        "text": "Mm."
+    },
+    {
+        "speaker": "C",
+        "starttime": 970.76,
+        "endtime": 971.52,
+        "text": "a one-handed job."
+    },
+    {
+        "speaker": "A",
+        "starttime": 974.38,
+        "endtime": 976.7,
+        "text": "I feel like I'm just shooting everything down here."
+    },
+    {
+        "speaker": "D",
+        "starttime": 976.07,
+        "endtime": 976.07,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "C",
+        "starttime": 976.077,
+        "endtime": 976.766,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "A",
+        "starttime": 976.7,
+        "endtime": 977.89,
+        "text": "Uh"
+    },
+    {
+        "speaker": "D",
+        "starttime": 977.19,
+        "endtime": 978.61,
+        "text": "That's fine."
+    },
+    {
+        "speaker": "A",
+        "starttime": 977.89,
+        "endtime": 978.39,
+        "text": "<sound: laugh> um"
+    },
+    {
+        "speaker": "D",
+        "starttime": 978.61,
+        "endtime": 980.51,
+        "text": "You're the boss, you're <sound: laugh> allowed to."
+    },
+    {
+        "speaker": "B",
+        "starttime": 982.89,
+        "endtime": 990.31,
+        "text": "Well with the one-handed design you also have the the problem of the size w 'cause you know from cell phones, they can be too small. So"
+    },
+    {
+        "speaker": "D",
+        "starttime": 989.92,
+        "endtime": 990.3,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "B",
+        "starttime": 990.31,
+        "endtime": 990.5,
+        "text": "if the"
+    },
+    {
+        "speaker": "A",
+        "starttime": 990.47,
+        "endtime": 990.81,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "B",
+        "starttime": 990.5,
+        "endtime": 1000.46,
+        "text": "remote is too small it if it's small it probably looks better, but may not be th as functional. So for that there's"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1003.23,
+        "endtime": 1006.41,
+        "text": "Okay, so"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1004.94,
+        "endtime": 1005.04,
+        "text": "So"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1006.41,
+        "endtime": 1071.99,
+        "text": "unfortunately we've got about five minutes here <sound: laugh> to come up with our um remote control idea and start rolling with it. Um we've talked about our experiences with remote control and um we've got a couple ideas um. Let's see here. What if we had what if we had not only um say we went with the ball the ball function um, but maybe we give it sort of grips along the side s um to make it easier to hold on to. So you know um s so"
+    },
+    {
+        "speaker": "C",
+        "starttime": 1071.81,
+        "endtime": 1072.2,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1071.99,
+        "endtime": 1131.21,
+        "text": "it's easier to hold onto that way. Course that'll then remove some of our our ball. Unless this unless this part were raised, so say the cover flips over and covers that part. So the grip is No, that wouldn't work either um. But if we're gonna make it flat on the bottom, then that eliminates our ball anyways. So if it were flat on the bottom and then had the sorta grips on the side here I guess, um and then <sound: laugh> flat uh And then we have the problem with the hinge. So if we're flat on the bottom, it's not gonna roll away, it'll stay where we want."
+    },
+    {
+        "speaker": "B",
+        "starttime": 1132.32,
+        "endtime": 1138.04,
+        "text": "The question is also, I dunno, d do you really always want to open that thing when you have to use it?"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1138.79,
+        "endtime": 1139.57,
+        "text": "Mm, that's"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1139.551,
+        "endtime": 1139.551,
+        "text": "<sound: other>"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1139.57,
+        "endtime": 1140.16,
+        "text": "true."
+    },
+    {
+        "speaker": "B",
+        "starttime": 1139.9,
+        "endtime": 1163.9,
+        "text": "It's probably going to lie around opened all the time anyway, so I don't know if a lid is a good idea. From stabil stability point of view uh it certainly is, but also you have to face it and take into account the more of these things break by accident, uh the more we sell. So it's don't make it too"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1163.72,
+        "endtime": 1164.0,
+        "text": "So"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1163.9,
+        "endtime": 1165.54,
+        "text": "stable"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1164.0,
+        "endtime": 1165.77,
+        "text": "we don't have it flip open."
+    },
+    {
+        "speaker": "B",
+        "starttime": 1165.54,
+        "endtime": 1165.83,
+        "text": "<sound: other> uh."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1167.09,
+        "endtime": 1169.13,
+        "text": "We just have a ball"
+    },
+    {
+        "speaker": "C",
+        "starttime": 1170.12,
+        "endtime": 1173.8,
+        "text": "But then maybe to go back to the to th s"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1173.79,
+        "endtime": 1173.89,
+        "text": "To"
+    },
+    {
+        "speaker": "C",
+        "starttime": 1173.8,
+        "endtime": 1174.01,
+        "text": "something"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1173.89,
+        "endtime": 1174.17,
+        "text": "the other"
+    },
+    {
+        "speaker": "C",
+        "starttime": 1174.01,
+        "endtime": 1174.21,
+        "text": "along"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1174.17,
+        "endtime": 1174.58,
+        "text": "design."
+    },
+    {
+        "speaker": "C",
+        "starttime": 1174.21,
+        "endtime": 1174.84,
+        "text": "those things then."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1175.2,
+        "endtime": 1180.95,
+        "text": "Okay, so then we forget the ball."
+    },
+    {
+        "speaker": "B",
+        "starttime": 1178.215,
+        "endtime": 1178.215,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "D",
+        "starttime": 1178.384,
+        "endtime": 1178.384,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1179.37,
+        "endtime": 1181.29,
+        "text": "It"
+    },
+    {
+        "speaker": "D",
+        "starttime": 1179.56,
+        "endtime": 1181.55,
+        "text": "Looks cool though."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1180.95,
+        "endtime": 1181.6,
+        "text": "<sound: laugh> It looks cool,"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1181.29,
+        "endtime": 1181.59,
+        "text": "looks"
+    },
+    {
+        "speaker": "D",
+        "starttime": 1181.55,
+        "endtime": 1182.59,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "B",
+        "starttime": 1181.59,
+        "endtime": 1181.88,
+        "text": "cool."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1181.6,
+        "endtime": 1181.95,
+        "text": "but it's"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1181.88,
+        "endtime": 1182.672,
+        "text": "<sound: other>"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1181.95,
+        "endtime": 1183.53,
+        "text": "really not it's not"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1183.4,
+        "endtime": 1183.74,
+        "text": "Uh"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1183.53,
+        "endtime": 1184.83,
+        "text": "functional"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1183.74,
+        "endtime": 1184.13,
+        "text": "<sound: other> functional."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1184.83,
+        "endtime": 1205.94,
+        "text": "um. So we've got our sort of keyboard kind. What if we flipped it around here, so that it were um Sorry, that doesn't look anything like what you <sound: laugh> had there. Um so it's up and down, you hold it this way. Course"
+    },
+    {
+        "speaker": "C",
+        "starttime": 1205.65,
+        "endtime": 1205.96,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1205.94,
+        "endtime": 1208.45,
+        "text": "then it's it's like the rectangular <sound: laugh> again,"
+    },
+    {
+        "speaker": "D",
+        "starttime": 1208.274,
+        "endtime": 1211.996,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1208.45,
+        "endtime": 1212.19,
+        "text": "only with a couple of jutting out points."
+    },
+    {
+        "speaker": "B",
+        "starttime": 1210.15,
+        "endtime": 1212.07,
+        "text": "Right. Right."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1212.19,
+        "endtime": 1215.4,
+        "text": "<sound: laugh> But it's one-handed um."
+    },
+    {
+        "speaker": "B",
+        "starttime": 1216.1,
+        "endtime": 1226.85,
+        "text": "Question is what makes those game pads functional? W I think that's pretty much the form for full hand. So it's a round shape underneath that makes it comfy,"
+    },
+    {
+        "speaker": "D",
+        "starttime": 1226.64,
+        "endtime": 1226.98,
+        "text": "Mm."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1226.7,
+        "endtime": 1227.07,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "B",
+        "starttime": 1226.85,
+        "endtime": 1231.1,
+        "text": "right, makes it nice, so that's the essential part. Except for that I think"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1230.92,
+        "endtime": 1231.33,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "B",
+        "starttime": 1231.1,
+        "endtime": 1231.68,
+        "text": "we'll not"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1231.33,
+        "endtime": 1231.579,
+        "text": "<sound: other>"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1231.68,
+        "endtime": 1235.16,
+        "text": "probably not get a get away from some longer design."
+    },
+    {
+        "speaker": "D",
+        "starttime": 1235.36,
+        "endtime": 1235.64,
+        "text": "Right."
+    },
+    {
+        "speaker": "B",
+        "starttime": 1237.3,
+        "endtime": 1241.3,
+        "text": "'Cause you also have to know which way around to point this thing."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1243.07,
+        "endtime": 1243.82,
+        "text": "Yeah,"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1243.14,
+        "endtime": 1243.92,
+        "text": "You know, all that dif"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1243.82,
+        "endtime": 1244.09,
+        "text": "because"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1243.92,
+        "endtime": 1245.46,
+        "text": "batteries"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1244.09,
+        "endtime": 1245.75,
+        "text": "it doesn't have a cord,"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1245.46,
+        "endtime": 1245.82,
+        "text": "right,"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1245.75,
+        "endtime": 1246.02,
+        "text": "like"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1245.82,
+        "endtime": 1245.97,
+        "text": "and"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1246.02,
+        "endtime": 1246.95,
+        "text": "joysticks do."
+    },
+    {
+        "speaker": "B",
+        "starttime": 1247.01,
+        "endtime": 1261.06,
+        "text": "Batteries go weak as well, so um after a while you have to point it towards the uh towards the equipment you wanna control with it, right? So, have to m show which is the front, which is the back."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1261.8,
+        "endtime": 1268.7,
+        "text": "Is it possible to have it to where it would work with a like a sensor on either side? So that"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1268.36,
+        "endtime": 1268.76,
+        "text": "I suppose"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1268.7,
+        "endtime": 1268.95,
+        "text": "either"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1268.76,
+        "endtime": 1268.97,
+        "text": "you could"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1268.95,
+        "endtime": 1269.08,
+        "text": "way"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1268.97,
+        "endtime": 1269.11,
+        "text": "do"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1269.08,
+        "endtime": 1269.25,
+        "text": "you're"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1269.11,
+        "endtime": 1269.91,
+        "text": "that."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1269.25,
+        "endtime": 1269.96,
+        "text": "pointing it it would"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1269.91,
+        "endtime": 1270.11,
+        "text": "O"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1269.96,
+        "endtime": 1270.29,
+        "text": "work."
+    },
+    {
+        "speaker": "B",
+        "starttime": 1270.11,
+        "endtime": 1273.59,
+        "text": "of course the more technology you stick in that, the more"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1273.43,
+        "endtime": 1273.6,
+        "text": "More"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1273.59,
+        "endtime": 1273.79,
+        "text": "it'll"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1273.6,
+        "endtime": 1274.14,
+        "text": "expensive"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1273.79,
+        "endtime": 1274.33,
+        "text": "cost,"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1274.14,
+        "endtime": 1274.46,
+        "text": "and"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1274.33,
+        "endtime": 1274.73,
+        "text": "so."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1274.46,
+        "endtime": 1274.96,
+        "text": "yeah."
+    },
+    {
+        "speaker": "B",
+        "starttime": 1275.85,
+        "endtime": 1277.54,
+        "text": "Course you can do that."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1278.457,
+        "endtime": 1281.93,
+        "text": "<sound: other> 'Kay. Um"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1286.36,
+        "endtime": 1294.74,
+        "text": "I mean of course it'll be evident after a while or if you look at it, it'll it'll be evident which way around to point it, since you have the the numbers and the and the"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1294.52,
+        "endtime": 1295.14,
+        "text": "True."
+    },
+    {
+        "speaker": "B",
+        "starttime": 1294.74,
+        "endtime": 1297.79,
+        "text": "<sound: other> the buttons and stuff, but um it's rather about"
+    },
+    {
+        "speaker": "C",
+        "starttime": 1297.74,
+        "endtime": 1297.91,
+        "text": "Put"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1297.79,
+        "endtime": 1297.94,
+        "text": "an"
+    },
+    {
+        "speaker": "C",
+        "starttime": 1297.91,
+        "endtime": 1297.99,
+        "text": "it"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1297.94,
+        "endtime": 1311.15,
+        "text": "instinctual thing, like you just grab it, you don't have to s look at it, you know, which way around to point it. Otherwise the design of or the the point of putting two sensors on both sides um would probably work."
+    },
+    {
+        "speaker": "C",
+        "starttime": 1311.56,
+        "endtime": 1321.1,
+        "text": "Even if you designed it in some in a way that you know, isn't a rectangle, but still pointed in a direction that had definite points. So if that's your thing and you"
+    },
+    {
+        "speaker": "D",
+        "starttime": 1321.05,
+        "endtime": 1322.12,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "C",
+        "starttime": 1321.1,
+        "endtime": 1322.76,
+        "text": "got something like that instead,"
+    },
+    {
+        "speaker": "D",
+        "starttime": 1322.12,
+        "endtime": 1322.271,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "C",
+        "starttime": 1322.76,
+        "endtime": 1325.41,
+        "text": "and there's your s you kn you know which way you're gonna pointing it."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1325.73,
+        "endtime": 1326.21,
+        "text": "'Kay."
+    },
+    {
+        "speaker": "D",
+        "starttime": 1326.29,
+        "endtime": 1326.61,
+        "text": "Sorry"
+    },
+    {
+        "speaker": "C",
+        "starttime": 1326.4,
+        "endtime": 1326.63,
+        "text": "Um"
+    },
+    {
+        "speaker": "D",
+        "starttime": 1326.61,
+        "endtime": 1328.01,
+        "text": "to interrupt, but we have a warning"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1327.88,
+        "endtime": 1328.07,
+        "text": "Are we"
+    },
+    {
+        "speaker": "D",
+        "starttime": 1328.01,
+        "endtime": 1328.11,
+        "text": "to"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1328.07,
+        "endtime": 1328.19,
+        "text": "out"
+    },
+    {
+        "speaker": "D",
+        "starttime": 1328.11,
+        "endtime": 1328.64,
+        "text": "finish."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1328.19,
+        "endtime": 1331.26,
+        "text": "of time?"
+    },
+    {
+        "speaker": "D",
+        "starttime": 1328.64,
+        "endtime": 1329.25,
+        "text": "Yeah."
+    },
+    {
+        "speaker": "B",
+        "starttime": 1328.8,
+        "endtime": 1329.06,
+        "text": "Mm."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1331.26,
+        "endtime": 1350.6,
+        "text": "Okay, well, just to finish up, should we s go with this plan, start making some Are good ideas, what are not."
+    },
+    {
+        "speaker": "B",
+        "starttime": 1351.04,
+        "endtime": 1351.66,
+        "text": "Let's."
+    },
+    {
+        "speaker": "C",
+        "starttime": 1351.09,
+        "endtime": 1351.74,
+        "text": "Does it say what does"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1351.66,
+        "endtime": 1352.25,
+        "text": "Obviously"
+    },
+    {
+        "speaker": "C",
+        "starttime": 1351.74,
+        "endtime": 1354.44,
+        "text": "it say for n it says on there what we need to do for the next meeting, I think."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1354.59,
+        "endtime": 1358.07,
+        "text": "Uh. Must"
+    },
+    {
+        "speaker": "C",
+        "starttime": 1357.93,
+        "endtime": 1358.1,
+        "text": "T"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1358.07,
+        "endtime": 1364.88,
+        "text": "finish now, so. And then marketing will look and see what uh what people want."
+    },
+    {
+        "speaker": "D",
+        "starttime": 1364.45,
+        "endtime": 1364.62,
+        "text": "Mm."
+    },
+    {
+        "speaker": "B",
+        "starttime": 1366.11,
+        "endtime": 1366.34,
+        "text": "Alright."
+    },
+    {
+        "speaker": "D",
+        "starttime": 1367.52,
+        "endtime": 1368.08,
+        "text": "Great."
+    },
+    {
+        "speaker": "A",
+        "starttime": 1369.66,
+        "endtime": 1374.51,
+        "text": "Okay. And Project Manager will design a better meeting for next <sound: laugh> time"
+    },
+    {
+        "speaker": "D",
+        "starttime": 1374.287,
+        "endtime": 1376.973,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "B",
+        "starttime": 1374.46,
+        "endtime": 1376.35,
+        "text": "<sound: laugh>"
+    },
+    {
+        "speaker": "A",
+        "starttime": 1374.51,
+        "endtime": 1381.7,
+        "text": "around, be a little bit more prepared. And uh alright, good meeting."
+    },
+    {
+        "speaker": "D",
+        "starttime": 1380.762,
+        "endtime": 1381.28,
+        "text": "<sound: laugh>"
+    }
+]

@@ -2,8 +2,8 @@ from rest_framework import viewsets
 from rest_framework import generics
 from rest_framework.response import Response
 from django.contrib.auth.models import User
-from .models import Moment, Survey
-from .serializers import MomentSerializer, MomentReadSerializer, UserSerializer, SurveySerializer
+from .models import Moment, Survey, Log
+from .serializers import MomentSerializer, MomentReadSerializer, UserSerializer, SurveySerializer, LogSerializer
 from data.models import Dataset, Line
 from data.serializers import LineSerializer
 from rest_framework.authtoken.models import Token
@@ -48,6 +48,22 @@ class SurveyViewSet(viewsets.ModelViewSet):
     data['user'] = request.user.pk
 
     serializer = SurveySerializer(data = data)
+
+    if serializer.is_valid():
+      newSurvey = serializer.save()
+      return Response(status = 201, data = serializer.data)
+
+    return Response(status = 400, data = serializer.errors)
+
+class LogViewSet(viewsets.ModelViewSet):
+  queryset = Log.objects.all()
+  serializer_class = LogSerializer
+
+  def create(self, request):
+    data = request.data
+    data['user'] = request.user.pk
+
+    serializer = LogSerializer(data = data)
 
     if serializer.is_valid():
       newSurvey = serializer.save()

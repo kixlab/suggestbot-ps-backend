@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Moment, Survey
+from .models import Moment, Survey, Log
 from django.contrib.auth.models import User
 from data.serializers import DataSetSerializer, LineSerializer
 from data.models import Line
@@ -39,14 +39,20 @@ class SurveySerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
   class Meta:
     model = User
-    fields = ['username', 'password']
+    fields = ['username', 'password', 'first_name']
 
     extra_kwargs = {'password': {'write_only': True}}
 
   def create(self, validated_data):
     user = User(
-        username=validated_data['username']
+        username=validated_data['username'],
+        first_name=validated_data['first_name']
     )
     user.set_password(validated_data['password'])
     user.save()
     return user
+
+class LogSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Log
+    fields = '__all__'

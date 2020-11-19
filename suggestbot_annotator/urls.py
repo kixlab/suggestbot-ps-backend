@@ -17,13 +17,15 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from data.viewsets import LineViewSet
-from base.viewsets import MomentViewSet, CreateUser, SurveyViewSet
+from base.viewsets import MomentViewSet, CreateUser, SurveyViewSet, LogViewSet
 from rest_framework.authtoken import views
 
 router = DefaultRouter()
 router.register(r'lines', LineViewSet)
 router.register(r'moments', MomentViewSet)
 router.register(r'surveys', SurveyViewSet)
+router.register(r'logs', LogViewSet)
+
 
 
 urlpatterns = [

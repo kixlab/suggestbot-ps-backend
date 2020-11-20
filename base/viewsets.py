@@ -1,13 +1,16 @@
 from rest_framework import viewsets
 from rest_framework import generics
 from rest_framework.response import Response
+from rest_framework.decorators import action
 from django.contrib.auth.models import User
 from .models import Moment, Survey, Log
 from .serializers import MomentSerializer, MomentReadSerializer, UserSerializer, SurveySerializer, LogSerializer
 from data.models import Dataset, Line
 from data.serializers import LineSerializer
 from rest_framework.authtoken.models import Token
-
+from django.http import HttpResponse
+from django.shortcuts import get_object_or_404
+import csv
 class MomentViewSet(viewsets.ModelViewSet):
   queryset = Moment.objects.all()
   serializer_class = MomentReadSerializer
@@ -38,6 +41,24 @@ class MomentViewSet(viewsets.ModelViewSet):
     serializer = MomentReadSerializer(queryset, many = True)
 
     return Response(serializer.data)
+
+  @action(detail = False, methods=['get'])
+  def export_csv(self, request):
+    dataset_id = request.query_params['dataset']
+    dataset = get_object_or_404(Dataset, dataset_id = dataset_id)
+    response = HttpResponse(content_type="text/csv")
+    response['Content-Disposition'] = 'attachment; filename=%s-moments.csv' % dataset_id
+    writer = csv.writer(response)
+
+    headers = ['username', 'dataset', 'speaker', 'line', 'timestamp', 'reason']
+
+    writer.writerow(headers)
+
+    for moment in Moment.objects.filter(dataset = dataset):
+      row = [moment.author.username, moment.dataset.dataset_id, moment.line.speaker, moment.line.text, moment.created_at, moment.possible_comment]
+      writer.writerow(row)
+
+    return response
 
 class SurveyViewSet(viewsets.ModelViewSet):
   queryset = Survey.objects.all()

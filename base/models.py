@@ -33,7 +33,7 @@ class Moment(models.Model):
   updated_at = models.DateTimeField(auto_now=True)
 
   def __str__(self):
-    return '%s: %s - %f' % (self.dataset.dataset_id, self.direction, self.timestamp)
+    return '%s: %s - %f by %s' % (self.dataset.dataset_id, self.direction, self.timestamp, self.author.username)
 
 @receiver(post_save, sender = settings.AUTH_USER_MODEL)
 def create_auth_token(sender, instance = None, created = False, **kwargs):

@@ -75,3 +75,6 @@ class Log(models.Model):
   status = models.CharField(max_length = 20)
   payload = models.TextField(blank = True)
   created_at = models.DateTimeField(auto_now_add = True)
+
+  def __str__(self):
+    return '%s: %s at %s' % (self.user.username, self.event_name, self.created_at)

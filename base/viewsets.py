@@ -50,12 +50,12 @@ class MomentViewSet(viewsets.ModelViewSet):
     response['Content-Disposition'] = 'attachment; filename=%s-moments.csv' % dataset_id
     writer = csv.writer(response)
 
-    headers = ['username', 'dataset', 'speaker', 'line', 'timestamp', 'reason']
+    headers = ['username', 'dataset', 'speaker', 'line', 'direction', 'reason', 'possible_comment', 'timestamp']
 
     writer.writerow(headers)
 
     for moment in Moment.objects.filter(dataset = dataset):
-      row = [moment.author.username, moment.dataset.dataset_id, moment.line.speaker, moment.line.text, moment.created_at, moment.possible_comment]
+      row = [moment.author.username, moment.dataset.dataset_id, moment.line.speaker, moment.line.text, moment.direcction, moment.reason, moment.possible_comment, moment.created_at]
       writer.writerow(row)
 
     return response
@@ -75,6 +75,23 @@ class SurveyViewSet(viewsets.ModelViewSet):
       return Response(status = 201, data = serializer.data)
 
     return Response(status = 400, data = serializer.errors)
+
+  @action(detail = False, methods=['get'])
+  def export_csv(self, request):
+    response = HttpResponse(content_type="text/csv")
+    response['Content-Disposition'] = 'attachment; filename=surveys.csv'
+    writer = csv.writer(response)
+
+    headers = ['username', 'pus1', 'pus2', 'pus3', 'rws1', 'rws2', 'rws3', 'sanity_check', 'status', 'free_response', 'created_at']
+
+    writer.writerow(headers)
+
+    for survey in Survey.objects.all():
+      row = [survey.user.username, survey.pus1, survey.pus2 , survey.pus3, survey.rws1, survey.rws2, survey.rws3, (survey.sanity_check == 2), survey.status, survey.free_response, survey.created_at]
+
+      writer.writerow(row)
+
+    return response
 
 class LogViewSet(viewsets.ModelViewSet):
   queryset = Log.objects.all()

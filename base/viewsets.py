@@ -50,12 +50,12 @@ class MomentViewSet(viewsets.ModelViewSet):
     response['Content-Disposition'] = 'attachment; filename=%s-moments.csv' % dataset_id
     writer = csv.writer(response)
 
-    headers = ['username', 'dataset', 'speaker', 'line', 'direction', 'reason', 'possible_comment', 'timestamp']
+    headers = ['username', 'dataset', 'timestamp', 'speaker', 'line', 'direction', 'reason', 'possible_comment', 'created_at']
 
     writer.writerow(headers)
 
     for moment in Moment.objects.filter(dataset = dataset):
-      row = [moment.author.username, moment.dataset.dataset_id, moment.line.speaker, moment.line.text, moment.direction, moment.reason, moment.possible_comment, moment.created_at]
+      row = [moment.author.username, moment.dataset.dataset_id, moment.line.starttime, moment.line.speaker, moment.line.text, moment.direction, moment.reason, moment.possible_comment, moment.created_at]
       writer.writerow(row)
 
     return response

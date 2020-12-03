@@ -55,7 +55,7 @@ class MomentViewSet(viewsets.ModelViewSet):
     writer.writerow(headers)
 
     for moment in Moment.objects.filter(dataset = dataset):
-      row = [moment.author.username, moment.dataset.dataset_id, moment.line.speaker, moment.line.text, moment.direcction, moment.reason, moment.possible_comment, moment.created_at]
+      row = [moment.author.username, moment.dataset.dataset_id, moment.line.speaker, moment.line.text, moment.direction, moment.reason, moment.possible_comment, moment.created_at]
       writer.writerow(row)
 
     return response

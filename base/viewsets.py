@@ -82,12 +82,23 @@ class SurveyViewSet(viewsets.ModelViewSet):
     response['Content-Disposition'] = 'attachment; filename=surveys.csv'
     writer = csv.writer(response)
 
-    headers = ['username', 'pus1', 'pus2', 'pus3', 'rws1', 'rws2', 'rws3', 'sanity_check', 'status', 'free_response', 'created_at']
+    headers = ['username', 'time_spent_task', 'pus1', 'pus2', 'pus3', 'rws1', 'rws2', 'rws3', 'sanity_check', 'status', 'free_response', 'created_at']
 
     writer.writerow(headers)
 
     for survey in Survey.objects.all():
-      row = [survey.user.username, survey.pus1, survey.pus2 , survey.pus3, survey.rws1, survey.rws2, survey.rws3, (survey.sanity_check == 2), survey.status, survey.free_response, survey.created_at]
+      try:
+        time_start_log = Log.objects.get(user = survey.user, event_name='StartTask')
+        time_start = time_start_log.created_at
+      except:
+        time_start = 0
+      try:
+        time_end_log = Log.objects.get(user = survey.user, event_name='EndTask')
+        time_end = time_end_log.created_at
+      except:
+        time_end =  0
+
+      row = [survey.user.username, time_start - time_end, survey.pus1, survey.pus2 , survey.pus3, survey.rws1, survey.rws2, survey.rws3, (survey.sanity_check == 2), survey.status, survey.free_response, survey.created_at]
 
       writer.writerow(row)
 

@@ -131,7 +131,7 @@ class CreateUser(generics.CreateAPIView):
 
     if user.exists():
       # return Response(status = 403, data='Selected user already exists')
-      token = Token.objects.get(user = user)
+      token = Token.objects.get(user = user[0])
       return Response(status = 200, data = {
         'token': token.key,
         'username': newUser.username

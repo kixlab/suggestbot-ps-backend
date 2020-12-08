@@ -93,11 +93,11 @@ class SurveyViewSet(viewsets.ModelViewSet):
         time_end_log = Log.objects.get(user = survey.user, event_name='EndTask')
         time_end = time_end_log.created_at
 
-        time_spent = time_end - time_start
+        time_spent = (time_end - time_start).total_seconds()
       except:
         time_spent = 0
 
-      row = [survey.user.username, time_spent.total_seconds(), survey.pus1, survey.pus2 , survey.pus3, survey.rws1, survey.rws2, survey.rws3, (survey.sanity_check == 2), survey.status, survey.free_response, survey.created_at]
+      row = [survey.user.username, time_spent, survey.pus1, survey.pus2 , survey.pus3, survey.rws1, survey.rws2, survey.rws3, (survey.sanity_check == 2), survey.status, survey.free_response, survey.created_at]
 
       writer.writerow(row)
 

@@ -134,7 +134,7 @@ class CreateUser(generics.CreateAPIView):
       token = Token.objects.get(user = user[0])
       return Response(status = 200, data = {
         'token': token.key,
-        'username': newUser.username
+        'username': user[0].username
       })
 
     else:

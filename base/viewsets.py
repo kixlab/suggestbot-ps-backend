@@ -130,12 +130,14 @@ class CreateUser(generics.CreateAPIView):
     user = User.objects.filter(username=request.data['username'])
 
     if user.exists():
-      # return Response(status = 403, data='Selected user already exists')
-      token = Token.objects.get(user = user[0])
-      return Response(status = 200, data = {
-        'token': token.key,
-        'username': user[0].username
-      })
+      return Response(status = 403, data='Selected user already exists')
+      # token = Token.objects.get(user = user[0])
+      # return Response(status = 200, data = {
+      #   'token': token.key,
+      #   'username': user[0].username,
+      #   'turker_id': user[0].last_name
+
+      # })
 
     else:
       serializer = UserSerializer(data = request.data)
@@ -145,7 +147,8 @@ class CreateUser(generics.CreateAPIView):
         token = Token.objects.get(user = newUser)
         return Response(status = 201, data = {
           'token': token.key,
-          'username': newUser.username
+          'username': newUser.username,
+          'turker_id': newUser.last_name
         })
 
       return Response(status = 400, data = serializer.errors)

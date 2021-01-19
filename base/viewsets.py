@@ -82,22 +82,24 @@ class SurveyViewSet(viewsets.ModelViewSet):
     response['Content-Disposition'] = 'attachment; filename=surveys.csv'
     writer = csv.writer(response)
 
-    headers = ['username', 'time_spent_task', 'pus1', 'pus2', 'pus3', 'rws1', 'rws2', 'rws3', 'sanity_check', 'status', 'free_response', 'created_at']
+    headers = ['username', 'time_spent_task', 'pus1', 'pus2', 'pus3', 'rws1', 'rws2', 'rws3', 'sanity_check', 'status', 'free_response', 'created_at', 'num_pages']
 
     writer.writerow(headers)
 
     for survey in Survey.objects.all():
       try:
-        time_start_log = Log.objects.get(user = survey.user, event_name='StartTask')
-        time_start = time_start_log.created_at
-        time_end_log = Log.objects.get(user = survey.user, event_name='EndTask')
-        time_end = time_end_log.created_at
+        time_start_log = Log.objects.filter(user = survey.user, event_name='StartTask', created_at__lt = survey.created_at)
+        time_start = time_start_log[-1].created_at
+        time_end_log = Log.objects.filter(user = survey.user, event_name='EndTask', created_at__lt = survey.created_at)
+        time_end = time_end_log[-1].created_at
+
+        num_pages = Log.objects.filter(user = survey.user, event_name='SeeMore').count()
 
         time_spent = (time_end - time_start).total_seconds()
-      except:
+      except Exception as err:
         time_spent = 0
 
-      row = [survey.user.username, time_spent, survey.pus1, survey.pus2 , survey.pus3, survey.rws1, survey.rws2, survey.rws3, (survey.sanity_check == 2), survey.user.first_name, survey.free_response, survey.created_at]
+      row = [survey.user.username, time_spent, survey.pus1, survey.pus2 , survey.pus3, survey.rws1, survey.rws2, survey.rws3, (survey.sanity_check == 2), survey.user.first_name, survey.free_response, survey.created_at, num_pages]
 
       writer.writerow(row)
 

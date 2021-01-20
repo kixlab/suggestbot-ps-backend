@@ -88,16 +88,17 @@ class SurveyViewSet(viewsets.ModelViewSet):
 
     for survey in Survey.objects.all():
       try:
-        time_start_log = Log.objects.filter(user = survey.user, event_name='StartTask', created_at__lt = survey.created_at)
-        time_start = time_start_log[-1].created_at
-        time_end_log = Log.objects.filter(user = survey.user, event_name='EndTask', created_at__lt = survey.created_at)
-        time_end = time_end_log[-1].created_at
+        time_start_log = Log.objects.filter(user = survey.user, event_name='StartTask', created_at__lt = survey.created_at).order_by('-created_at')
+        time_start = time_start_log[0].created_at
+        time_end_log = Log.objects.filter(user = survey.user, event_name='EndTask', created_at__lt = survey.created_at).order_by('-created_at')
+        time_end = time_end_log[0].created_at
 
         num_pages = Log.objects.filter(user = survey.user, event_name='SeeMore').count()
 
         time_spent = (time_end - time_start).total_seconds()
       except Exception as err:
         time_spent = 0
+        num_pages = 1
 
       row = [survey.user.username, time_spent, survey.pus1, survey.pus2 , survey.pus3, survey.rws1, survey.rws2, survey.rws3, (survey.sanity_check == 2), survey.user.first_name, survey.free_response, survey.created_at, num_pages]
 

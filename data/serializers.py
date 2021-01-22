@@ -6,6 +6,7 @@ class DataSetSerializer(serializers.Serializer):
 
 class LineSerializer(serializers.ModelSerializer):
   dataset = serializers.StringRelatedField(read_only = True)
+  moments = serializers.IntegerField(read_only=True)
   class Meta:
     model = Line
     fields = '__all__'

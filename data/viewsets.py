@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from .serializers import LineSerializer
 from .models import Line, Dataset
 from rest_framework.decorators import action
+from django.db.models import Count
 
 class LineViewSet(viewsets.ViewSet):
   queryset = Line.objects.all()
@@ -14,7 +15,7 @@ class LineViewSet(viewsets.ViewSet):
     dataset_id = request.query_params['dataset']
     print(dataset_id)
     dataset = Dataset.objects.get(dataset_id = dataset_id)
-    queryset = Line.objects.filter(dataset = dataset)
+    queryset = Line.objects.filter(dataset = dataset).annotate(moments=Count('moment'))
     serializer = LineSerializer(queryset, many = True)
     return Response(serializer.data)
 

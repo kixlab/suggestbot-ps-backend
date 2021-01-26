@@ -98,7 +98,7 @@ class SurveyViewSet(viewsets.ModelViewSet):
         time_spent = (time_end - time_start).total_seconds()
       except Exception as err:
         time_spent = 0
-        num_pages = 1
+        num_pages = 0 
 
       row = [survey.user.username, time_spent, survey.pus1, survey.pus2 , survey.pus3, survey.rws1, survey.rws2, survey.rws3, (survey.sanity_check == 2), survey.user.first_name, survey.free_response, survey.created_at, num_pages]
 

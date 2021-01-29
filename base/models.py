@@ -44,17 +44,17 @@ def create_auth_token(sender, instance = None, created = False, **kwargs):
 class Survey(models.Model):
   user = models.ForeignKey(User, on_delete=models.CASCADE)
 
-  # fas1 = models.IntegerField()
-  # fas2 = models.IntegerField()
-  # fas3 = models.IntegerField()
+  fas1 = models.IntegerField()
+  fas2 = models.IntegerField()
+  fas3 = models.IntegerField()
 
   pus1 = models.IntegerField()
   pus2 = models.IntegerField()
   pus3 = models.IntegerField()
 
-  # aes1 = models.IntegerField()
-  # aes2 = models.IntegerField()
-  # aes3 = models.IntegerField()
+  aes1 = models.IntegerField()
+  aes2 = models.IntegerField()
+  aes3 = models.IntegerField()
 
   rws1 = models.IntegerField()
   rws2 = models.IntegerField()

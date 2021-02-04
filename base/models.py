@@ -61,10 +61,11 @@ class Survey(models.Model):
   rws3 = models.IntegerField()
 
   sanity_check = models.IntegerField()
+
   status = models.CharField(max_length=20)
 
   free_response = models.TextField()
-
+  topic = models.TextField()
   created_at = models.DateTimeField(auto_now_add = True)
   updated_at = models.DateTimeField(auto_now=True)
 

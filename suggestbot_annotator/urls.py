@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from data.viewsets import LineViewSet
-from base.viewsets import MomentViewSet, CreateUser, SurveyViewSet, LogViewSet
+from base.viewsets import MomentViewSet, CreateUser, SurveyViewSet, LogViewSet, DeactivateUser
 from rest_framework.authtoken import views
 
 router = DefaultRouter()
@@ -32,5 +32,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
     path('auth/', views.obtain_auth_token),
-    path('register/', CreateUser.as_view())
+    path('register/', CreateUser.as_view()),
+    path('deactivate/', DeactivateUser.as_view())
+
 ]

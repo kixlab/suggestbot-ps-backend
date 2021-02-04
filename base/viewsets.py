@@ -2,6 +2,7 @@ from rest_framework import viewsets
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.decorators import action
+from rest_framework.views import APIView
 from django.contrib.auth.models import User
 from .models import Moment, Survey, Log
 from .serializers import MomentSerializer, MomentReadSerializer, UserSerializer, SurveySerializer, LogSerializer
@@ -11,6 +12,7 @@ from rest_framework.authtoken.models import Token
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 import csv
+from rest_framework.mixins import UpdateModelMixin
 class MomentViewSet(viewsets.ModelViewSet):
   queryset = Moment.objects.all()
   serializer_class = MomentReadSerializer
@@ -34,7 +36,7 @@ class MomentViewSet(viewsets.ModelViewSet):
   def list(self, request):
     dataset_id = request.query_params['dataset_id']
     dataset = Dataset.objects.get(dataset_id = dataset_id)
-    queryset = Moment.objects.filter(dataset = dataset)
+    queryset = Moment.objects.filter(dataset = dataset, author__is_active = True)
     if request.user is not None:
       queryset = queryset.filter(author = request.user)
     
@@ -54,7 +56,7 @@ class MomentViewSet(viewsets.ModelViewSet):
 
     writer.writerow(headers)
 
-    for moment in Moment.objects.filter(dataset = dataset):
+    for moment in Moment.objects.filter(dataset = dataset, author__is_active = True):
       agree_cnt = Moment.objects.filter(dataset = dataset, line = moment.line, direction = moment.direction).count()
       exact_cnt = Moment.objects.filter(dataset = dataset, line = moment.line, direction = moment.direction, reason = moment.reason).count()
       row = [moment.author.username, moment.author.first_name, moment.dataset.dataset_id, moment.line.starttime, moment.line.speaker, moment.line.text, moment.direction, agree_cnt, exact_cnt, moment.reason, moment.possible_comment, moment.created_at]
@@ -88,7 +90,7 @@ class SurveyViewSet(viewsets.ModelViewSet):
 
     writer.writerow(headers)
 
-    for survey in Survey.objects.all():
+    for survey in Survey.objects.filter(user__is_active = True):
       try:
         time_start_log = Log.objects.filter(user = survey.user, event_name='StartTask', created_at__lt = survey.created_at).order_by('-created_at')
         time_start = time_start_log[0].created_at
@@ -157,6 +159,28 @@ class CreateUser(generics.CreateAPIView):
         })
 
       return Response(status = 400, data = serializer.errors)
+    
+class DeactivateUser(APIView):
+  queryset = User.objects.all()
+
+  def put(self, request):
+    data = request.data
+
+    succeeded_user = []
+    try:
+      for user_id in data:
+        user = User.objects.get(username=user_id)
+        user.is_active = False
+
+        user.save()
+        succeeded_user.append(user_id)
+    except Exception as err:
+      return Response(status = 400, data={'err': err, 'succeeded_user': succeeded_user})
+
+    
+    return Response(status = 200, data = succeeded_user)
+
+
     
 
 

@@ -16,8 +16,8 @@ class LineViewSet(viewsets.ViewSet):
     print(dataset_id)
     dataset = Dataset.objects.get(dataset_id = dataset_id)
     queryset = Line.objects.filter(dataset = dataset).annotate(
-      moments_positive=Count('moment', filter=Q(moment__direction = 'POSITIVE')),
-      moments_negative=Count('moment', filter=Q(moment__direction = 'NEGATIVE'))
+      moments_positive=Count('moment', filter=Q(moment__direction = 'POSITIVE', moment__author__is_active = True)),
+      moments_negative=Count('moment', filter=Q(moment__direction = 'NEGATIVE', moment__author__is_active = True))
     )
     serializer = LineSerializer(queryset, many = True)
     return Response(serializer.data)

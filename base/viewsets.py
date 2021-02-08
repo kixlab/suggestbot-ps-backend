@@ -86,7 +86,7 @@ class SurveyViewSet(viewsets.ModelViewSet):
     response['Content-Disposition'] = 'attachment; filename=surveys.csv'
     writer = csv.writer(response)
 
-    headers = ['username', 'time_spent_task', 'fas1', 'fas2', 'fas3', 'pus1', 'pus2', 'pus3', 'aes1', 'aes2', 'aes3', 'rws1', 'rws2', 'rws3', 'sanity_check', 'status', 'free_response', 'created_at', 'num_pages']
+    headers = ['username', 'time_spent_task', 'fas1', 'fas2', 'fas3', 'pus1', 'pus2', 'pus3', 'aes1', 'aes2', 'aes3', 'rws1', 'rws2', 'rws3', 'sanity_check', 'status', 'free_response', 'topic', 'created_at', 'num_pages']
 
     writer.writerow(headers)
 
@@ -104,7 +104,7 @@ class SurveyViewSet(viewsets.ModelViewSet):
         time_spent = 0
         num_pages = 0 
 
-      row = [survey.user.username, time_spent, survey.fas1, survey.fas2 , survey.fas3, survey.pus1, survey.pus2 , survey.pus3, survey.aes1, survey.aes2 , survey.aes3, survey.rws1, survey.rws2, survey.rws3, (survey.sanity_check == 2), survey.user.first_name, survey.free_response, survey.created_at, num_pages]
+      row = [survey.user.username, time_spent, survey.fas1, survey.fas2 , survey.fas3, survey.pus1, survey.pus2 , survey.pus3, survey.aes1, survey.aes2 , survey.aes3, survey.rws1, survey.rws2, survey.rws3, (survey.sanity_check == 2), survey.user.first_name, survey.free_response, survey.topic, survey.created_at, num_pages]
 
       writer.writerow(row)
 

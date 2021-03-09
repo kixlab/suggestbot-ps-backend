@@ -155,7 +155,8 @@ class CreateUser(generics.CreateAPIView):
         return Response(status = 201, data = {
           'token': token.key,
           'username': newUser.username,
-          'turker_id': newUser.last_name
+          'turker_id': newUser.last_name,
+          'random_words': newUser.email
         })
 
       return Response(status = 400, data = serializer.errors)

@@ -57,8 +57,8 @@ class MomentViewSet(viewsets.ModelViewSet):
     writer.writerow(headers)
 
     for moment in Moment.objects.filter(dataset = dataset, author__is_active = True):
-      agree_cnt = Moment.objects.filter(dataset = dataset, line = moment.line, direction = moment.direction).count()
-      exact_cnt = Moment.objects.filter(dataset = dataset, line = moment.line, direction = moment.direction, reason = moment.reason).count()
+      agree_cnt = Moment.objects.filter(dataset = dataset, line = moment.line, direction = moment.direction, author__is_active = True, created_at__lt = moment.created_at).count()
+      exact_cnt = Moment.objects.filter(dataset = dataset, line = moment.line, direction = moment.direction, author__is_active = True, created_at__lt = moment.created_at, reason = moment.reason).count()
       row = [moment.author.username, moment.author.first_name, moment.dataset.dataset_id, moment.line.starttime, moment.line.speaker, moment.line.text, moment.direction, agree_cnt, exact_cnt, moment.reason, moment.possible_comment, moment.created_at]
       writer.writerow(row)
 

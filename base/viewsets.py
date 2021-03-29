@@ -72,9 +72,11 @@ class MomentViewSet(viewsets.ModelViewSet):
     result = {}
 
     for dataset in datasets:
+      moments = Moment.objects.filter(author__is_active = True, dataset = dataset).order_by('timestamp')
+      if moments is None:
+        continue
       count_lines = Line.objects.filter(dataset=dataset).count()
       script_length = Line.objects.filter(dataset=dataset).aggregate(Max('starttime'))
-      moments = Moment.objects.filter(author__is_active = True, dataset = dataset).order_by('timestamp')
       moments_count = moments.count()
       last_coverage = moments.last().timestamp
       three_q_coverage = moments[math.ceil(moments_count * 0.75)]

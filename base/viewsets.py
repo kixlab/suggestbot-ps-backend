@@ -73,7 +73,7 @@ class MomentViewSet(viewsets.ModelViewSet):
 
     for dataset in datasets:
       count_lines = Line.objects.filter(dataset=dataset).count()
-      script_length = Line.objects.filter(dataset=dataset).aggregate(Max('start_time'))
+      script_length = Line.objects.filter(dataset=dataset).aggregate(Max('starttime'))
       moments = Moment.objects.filter(author__is_active = True, dataset = dataset).order_by('timestamp')
       moments_count = moments.count()
       last_coverage = moments.last().timestamp

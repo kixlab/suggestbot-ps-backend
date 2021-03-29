@@ -11,7 +11,8 @@ from data.serializers import LineSerializer
 from rest_framework.authtoken.models import Token
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
-import csv
+from django.db.models import Max
+import csv, math
 from rest_framework.mixins import UpdateModelMixin
 class MomentViewSet(viewsets.ModelViewSet):
   queryset = Moment.objects.all()
@@ -64,6 +65,28 @@ class MomentViewSet(viewsets.ModelViewSet):
 
     return response
 
+  @action(detail = False, methods=['get'])
+  def export_stats(self, request):
+    datasets = Dataset.objects.all()
+
+    result = {}
+
+    for dataset in datasets:
+      count_lines = Lines.objects.filter(dataset=dataset).count()
+      script_length = Lines.objects.filter(dataset=dataset).aggregate(Max('start_time'))
+      moments = Moment.objects.filter(author__is_active = True, dataset = dataset).order_by('timestamp')
+      moments_count = moments.count()
+      last_coverage = moments.last().timestamp
+      three_q_coverage = moments[math.ceil(moments_count * 0.75)]
+      result[dataset.dataset_id] = {
+        'count_lines': count_lines,
+        'script_length': script_length,
+        'moments_count': moments_count,
+        'last_coverage': last_coverage,
+        'three_q_coverage': three_q_coverage
+      }
+
+    return JsonResponse(result)
 class SurveyViewSet(viewsets.ModelViewSet):
   queryset = Survey.objects.all()
   serializer_class = SurveySerializer

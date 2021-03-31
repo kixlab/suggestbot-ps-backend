@@ -73,13 +73,13 @@ class MomentViewSet(viewsets.ModelViewSet):
 
     for dataset in datasets:
       moments = Moment.objects.filter(author__is_active = True, dataset = dataset).order_by('timestamp')
-      if moments is None:
+      moments_count = moments.count()
+      if moments_count == 0:
         continue
       count_lines = Line.objects.filter(dataset=dataset).count()
-      script_length = Line.objects.filter(dataset=dataset).aggregate(Max('starttime'))
-      moments_count = moments.count()
+      script_length = Line.objects.filter(dataset=dataset).aggregate(Max('starttime'))['starttime__max']
       last_coverage = moments.last().timestamp
-      three_q_coverage = moments[math.ceil(moments_count * 0.75)]
+      three_q_coverage = moments[math.ceil(moments_count * 0.75)].timestamp
       result[dataset.dataset_id] = {
         'count_lines': count_lines,
         'script_length': script_length,
@@ -88,7 +88,8 @@ class MomentViewSet(viewsets.ModelViewSet):
         'three_q_coverage': three_q_coverage
       }
 
-    return JsonResponse(result)
+    return Response(result)
+
 class SurveyViewSet(viewsets.ModelViewSet):
   queryset = Survey.objects.all()
   serializer_class = SurveySerializer

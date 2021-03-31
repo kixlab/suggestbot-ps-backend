@@ -67,7 +67,7 @@ class MomentViewSet(viewsets.ModelViewSet):
 
   @action(detail = False, methods=['get'])
   def export_stats(self, request):
-    datasets = Dataset.objects.all()
+    datasets = Dataset.objects.all().order_by('dataset_id')
 
     result = {}
 

@@ -76,10 +76,12 @@ class MomentViewSet(viewsets.ModelViewSet):
       moments_count = moments.count()
       if moments_count == 0:
         continue
-      count_lines = Line.objects.filter(dataset=dataset).count()
-      script_length = Line.objects.filter(dataset=dataset).aggregate(Max('starttime'))['starttime__max']
+      lines = Line.objects.filter(dataset = dataset)
+      count_lines = lines.count()
+      script_length = lines.aggregate(Max('starttime'))['starttime__max']
       last_coverage = moments.last().timestamp
       three_q_coverage = moments[math.ceil(moments_count * 0.75)].timestamp
+      three_q_line_num = moments[math.ceil(moments_count * 0.75)].pk - moments.first().pk + 1
       result[dataset.dataset_id] = {
         'count_lines': count_lines,
         'script_length': script_length,

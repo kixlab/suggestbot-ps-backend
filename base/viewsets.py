@@ -87,7 +87,8 @@ class MomentViewSet(viewsets.ModelViewSet):
         'script_length': script_length,
         'moments_count': moments_count,
         'last_coverage': last_coverage,
-        'three_q_coverage': three_q_coverage
+        'three_q_coverage': three_q_coverage,
+        'three_q_line_num': three_q_line_num
       }
 
     return Response(result)

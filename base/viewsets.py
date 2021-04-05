@@ -11,9 +11,10 @@ from data.serializers import LineSerializer
 from rest_framework.authtoken.models import Token
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
-from django.db.models import Max, Count, Min
+from django.db.models import Max, Count, Min, Q
 import csv, math
 from rest_framework.mixins import UpdateModelMixin
+from django.utils import timezone
 class MomentViewSet(viewsets.ModelViewSet):
   queryset = Moment.objects.all()
   serializer_class = MomentReadSerializer
@@ -115,9 +116,44 @@ class MomentViewSet(viewsets.ModelViewSet):
 
     return Response(count)
 
-  # @action(detail = False, methods = ['get'])
-  # def compute_bonus(self, request):
-  #   users = User.objects.filter(is_active = True)
+  @action(detail = False, methods = ['get'])
+  def compute_bonus(self, request):
+    users = User.objects.filter(is_active = True)
+    if len(request.query_params) > 0:
+      batch_name = request.query_params['batch_name']
+      users = users.filter(username__endswith = batch_name)
+    
+    bonus = {}
+
+    for user in users:
+      parsing = user.username.split('-', 1)
+      username = parsing[0]
+      if len(parsing) == 2:
+        postfix = parsing
+      else:
+        postfix = None
+      moments = Moment.objects.filter(author = user)
+      moments_count = moments.count()
+
+      bonus_quals = 0
+
+      for moment in moments:
+        agree_temp = Moment.objects.filter(direction = moment.direction, line = moment.line, author__is_active = True)
+        if postfix is not None:
+          agree_cnt = agree_temp.filter(Q(author__username__endswith = postfix) | Q(created_at__lte = moment.created_at)).count()
+        else:
+          agree_cnt = agree_temp.filter(created_at__lte = moment.created_at + timezone.timedelta(days=1)).count()
+        if agree_cnt >= 3:
+          bonus_quals += 1
+      
+      bonus[username] = {
+        'moments_count': moments_count,
+        'bonus_qualifying_moments': bonus_quals,
+        'bonus_count': min(moments_count - 5, bonus_quals)
+      }
+
+    
+    return Response(bonus)
 
     
 

@@ -121,7 +121,10 @@ class MomentViewSet(viewsets.ModelViewSet):
     users = User.objects.filter(is_active = True)
     if len(request.query_params) > 0:
       batch_name = request.query_params['batch_name']
-      users = users.filter(username__endswith = batch_name)
+      if batch_name == 'NA':
+        users = user.exclude(username__contains='-')
+      else:
+        users = users.filter(username__endswith = batch_name)
     
     bonus = {}
 
@@ -135,6 +138,9 @@ class MomentViewSet(viewsets.ModelViewSet):
       moments = Moment.objects.filter(author = user)
       moments_count = moments.count()
 
+      if moments_count < 5:
+        continue
+
       bonus_quals = 0
 
       for moment in moments:
@@ -147,6 +153,8 @@ class MomentViewSet(viewsets.ModelViewSet):
           bonus_quals += 1
       
       bonus[username] = {
+        'username': user.username,
+        'user_created_at': user.date_joined,
         'moments_count': moments_count,
         'bonus_qualifying_moments': bonus_quals,
         'bonus_count': min(moments_count - 5, bonus_quals)

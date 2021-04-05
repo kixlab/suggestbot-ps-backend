@@ -152,13 +152,16 @@ class MomentViewSet(viewsets.ModelViewSet):
         if agree_cnt >= 3:
           bonus_quals += 1
       
-      bonus[username] = {
-        'username': user.username,
-        'user_created_at': user.date_joined,
-        'moments_count': moments_count,
-        'bonus_qualifying_moments': bonus_quals,
-        'bonus_count': min(moments_count - 5, bonus_quals)
-      }
+      if bonus_quals > 0:
+        bonus[user.username] = {
+          'username': user.username,
+          'user_created_at': user.date_joined,
+          'bonus_count': min(moments_count - 5, bonus_quals),
+          'moments_count': moments_count,
+          'bonus_qualifying_moments': bonus_quals,
+        }
+
+
 
     
     return Response(bonus)

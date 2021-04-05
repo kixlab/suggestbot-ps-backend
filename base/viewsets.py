@@ -11,7 +11,7 @@ from data.serializers import LineSerializer
 from rest_framework.authtoken.models import Token
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
-from django.db.models import Max
+from django.db.models import Max, Count, Min
 import csv, math
 from rest_framework.mixins import UpdateModelMixin
 class MomentViewSet(viewsets.ModelViewSet):
@@ -92,6 +92,34 @@ class MomentViewSet(viewsets.ModelViewSet):
       }
 
     return Response(result)
+
+  @action(detail = False, methods = ['put'])
+  def deduplicate(self, request):
+    unique_fields = ['author', 'line', 'direction', 'possible_comment']
+    duplicates = (
+      Moment.objects.values(*unique_fields)
+      .order_by()
+      .annotate(min_id=Min('id'), count_id=Count('id'))
+      .filter(count_id__gt=1)
+    )
+
+    count = 0
+    for duplicate in duplicates:
+      num_deletes = (
+        Moment.objects.filter(**{x: duplicate[x] for x in unique_fields})
+        .exclude(id=duplicate['min_id'])
+        .delete()
+      )
+      count += num_deletes[0]
+
+
+    return Response(count)
+
+  # @action(detail = False, methods = ['get'])
+  # def compute_bonus(self, request):
+  #   users = User.objects.filter(is_active = True)
+
+    
 
 class SurveyViewSet(viewsets.ModelViewSet):
   queryset = Survey.objects.all()

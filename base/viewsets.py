@@ -87,7 +87,10 @@ class MomentViewSet(viewsets.ModelViewSet):
       three_q_coverage = moments[math.ceil(moments_count * 0.75) - 1].timestamp
       three_q_line_num = moments[math.ceil(moments_count * 0.75) - 1].line.pk - all_lines.first().pk + 1
       three_q_line = lines[math.ceil(lines_count * 0.75) - 1].starttime
-      three_q_line_linenum = lines[math.ceil(lines_count * 0.75) - 1].pk - all_lines.first().pk
+      three_q_line_linenum = lines[math.ceil(lines_count * 0.75) - 1].pk - all_lines.first().pk + 1
+      three_q_annotation_density = moments.filter(line__pk__lte = lines[math.ceil(lines_count * 0.75) - 1].pk).count() / three_q_line_linenum 
+      one_q_annotation_density = moments.filter(line__pk__gt = lines[math.ceil(lines_count * 0.75) - 1].pk).count() / (count_lines - three_q_line_linenum)
+
       result[dataset.dataset_id] = {
         'count_lines': count_lines,
         'script_length': script_length,
@@ -96,7 +99,9 @@ class MomentViewSet(viewsets.ModelViewSet):
         'three_q_coverage': three_q_coverage,
         'three_q_line_num': three_q_line_num,
         'three_q_line': three_q_line,
-        'three_q_line_linenum': three_q_line_linenum
+        'three_q_line_linenum': three_q_line_linenum,
+        'three_q_annotation_density': three_q_annotation_density,
+        'one_q_annotation_density': one_q_annotation_density
       }
 
     return Response(result)

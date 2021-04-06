@@ -75,21 +75,28 @@ class MomentViewSet(viewsets.ModelViewSet):
     for dataset in datasets:
       moments = Moment.objects.filter(author__is_active = True, dataset = dataset).order_by('timestamp')
       moments_count = moments.count()
+      inner_qs = moments.values('line').distinct()
+      all_lines = Line.objects.filter(dataset = dataset).order_by('starttime')
+      lines = Line.objects.filter(id__in=inner_qs).order_by('starttime')
+      lines_count = lines.count()
       if moments_count == 0:
         continue
-      lines = Line.objects.filter(dataset = dataset)
-      count_lines = lines.count()
-      script_length = lines.aggregate(Max('starttime'))['starttime__max']
+      count_lines = all_lines.count()
+      script_length = all_lines.aggregate(Max('starttime'))['starttime__max']
       last_coverage = moments.last().timestamp
-      three_q_coverage = moments[math.ceil(moments_count * 0.75)].timestamp
-      three_q_line_num = moments[math.ceil(moments_count * 0.75)].line.pk - moments.first().line.pk + 1
+      three_q_coverage = moments[math.ceil(moments_count * 0.75) - 1].timestamp
+      three_q_line_num = moments[math.ceil(moments_count * 0.75) - 1].line.pk - all_lines.first().pk + 1
+      three_q_line = lines[math.ceil(lines_count * 0.75) - 1].starttime
+      three_q_line_linenum = lines[math.ceil(lines_count * 0.75) - 1].pk - all_lines.first().pk
       result[dataset.dataset_id] = {
         'count_lines': count_lines,
         'script_length': script_length,
         'moments_count': moments_count,
         'last_coverage': last_coverage,
         'three_q_coverage': three_q_coverage,
-        'three_q_line_num': three_q_line_num
+        'three_q_line_num': three_q_line_num,
+        'three_q_line': three_q_line,
+        'three_q_line_linenum': three_q_line_linenum
       }
 
     return Response(result)

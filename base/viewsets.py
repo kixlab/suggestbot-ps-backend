@@ -75,6 +75,7 @@ class MomentViewSet(viewsets.ModelViewSet):
     for dataset in datasets:
       moments = Moment.objects.filter(author__is_active = True, dataset = dataset).order_by('timestamp')
       moments_count = moments.count()
+      # surveys = Survey.objects.filter(user__username__includes = dataset.dataset_id).annotate(time_coverage = int(user__username.split('-')[-1]) + 1)
       inner_qs = moments.values('line').distinct()
       all_lines = Line.objects.filter(dataset = dataset).order_by('starttime')
       lines = Line.objects.filter(id__in=inner_qs).order_by('starttime')
@@ -200,6 +201,28 @@ class SurveyViewSet(viewsets.ModelViewSet):
 
     return Response(status = 400, data = serializer.errors)
 
+  @action(detail = False, methods = ['put'])
+  def deduplicate(self, request):
+    unique_fields = ['user', 'free_response', 'topic']
+    duplicates = (
+      Survey.objects.values(*unique_fields)
+      .order_by()
+      .annotate(min_id=Min('id'), count_id=Count('id'))
+      .filter(count_id__gt=1)
+    )
+
+    count = 0
+    for duplicate in duplicates:
+      num_deletes = (
+        Survey.objects.filter(**{x: duplicate[x] for x in unique_fields})
+        .exclude(id=duplicate['min_id'])
+        .delete()
+      )
+      count += num_deletes[0]
+
+
+    return Response(count)
+
   @action(detail = False, methods=['get'])
   def export_csv(self, request):
     response = HttpResponse(content_type="text/csv")
@@ -220,11 +243,14 @@ class SurveyViewSet(viewsets.ModelViewSet):
         num_pages = Log.objects.filter(user = survey.user, event_name='SeeMore').count()
 
         time_spent = (time_end - time_start).total_seconds()
+
+        free_response = survey.free_response.replace('\n', ' ')
+        topic = survey.topic.replace('\n', ' ')
       except Exception as err:
         time_spent = 0
         num_pages = 0 
 
-      row = [survey.user.username, time_spent, survey.fas1, survey.fas2 , survey.fas3, survey.pus1, survey.pus2 , survey.pus3, survey.aes1, survey.aes2 , survey.aes3, survey.rws1, survey.rws2, survey.rws3, (survey.sanity_check == 2), survey.user.first_name, survey.free_response, survey.topic, survey.created_at, num_pages]
+      row = [survey.user.username, time_spent, survey.fas1, survey.fas2 , survey.fas3, survey.pus1, survey.pus2 , survey.pus3, survey.aes1, survey.aes2 , survey.aes3, survey.rws1, survey.rws2, survey.rws3, (survey.sanity_check == 2), survey.user.first_name, free_response, topic, survey.created_at, num_pages]
 
       writer.writerow(row)
 

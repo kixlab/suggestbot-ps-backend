@@ -76,7 +76,7 @@ class MomentViewSet(viewsets.ModelViewSet):
     response['Content-Disposition'] = 'attachment; filename=%s-moments.csv' % dataset_id
     writer = csv.writer(response)
 
-    headers = ['user_id', 'dataset', 'timestamp', 'speaker', 'line', 'direction', 'agree_cnt', 'exact_cnt', 'reason', 'possible_comment', 'created_at']
+    headers = ['user_id', 'dataset', 'timestamp', 'speaker', 'line', 'direction', 'agree_cnt', 'reason', 'possible_comment', 'created_at']
     if self.usernames is None:
       self.usernames = {}
       users = User.objects.filter(is_active = True).values_list('username')
@@ -89,7 +89,7 @@ class MomentViewSet(viewsets.ModelViewSet):
     writer.writerow(headers)
 
     for moment in Moment.objects.filter(dataset = dataset, author__is_active = True):
-      agree_cnt = Moment.objects.filter(dataset = dataset, line = moment.line, direction = moment.direction, author__is_active = True, created_at__lt = moment.created_at).count()
+      agree_cnt = Moment.objects.filter(dataset = dataset, line = moment.line, direction = moment.direction, author__is_active = True).count()
       username = moment.author.username.split('-')[0]
       # if username not in usernames:
       #   usernames[username] = len(usernames)

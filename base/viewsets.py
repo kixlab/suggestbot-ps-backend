@@ -19,6 +19,8 @@ class MomentViewSet(viewsets.ModelViewSet):
   queryset = Moment.objects.all()
   serializer_class = MomentReadSerializer
 
+  usernames = None
+
   def create(self, request):
     # serializer_class = MomentSerializer
     data = request.data
@@ -75,15 +77,23 @@ class MomentViewSet(viewsets.ModelViewSet):
     writer = csv.writer(response)
 
     headers = ['user_id', 'dataset', 'timestamp', 'speaker', 'line', 'direction', 'agree_cnt', 'exact_cnt', 'reason', 'possible_comment', 'created_at']
-    usernames = {}
+    if self.usernames is None:
+      self.usernames = {}
+      users = User.objects.filter(is_active = True).values_list('username')
+      usernames = [username[0].split('-')[0] for username in users]
+
+      for username in usernames:
+        if username not in self.usernames:
+          self.usernames[username] = len(self.usernames)
+
     writer.writerow(headers)
 
     for moment in Moment.objects.filter(dataset = dataset, author__is_active = True):
       agree_cnt = Moment.objects.filter(dataset = dataset, line = moment.line, direction = moment.direction, author__is_active = True, created_at__lt = moment.created_at).count()
       username = moment.author.username.split('-')[0]
-      if username not in usernames:
-        usernames[username] = len(usernames)
-      anonymous_name = usernames[username]
+      # if username not in usernames:
+      #   usernames[username] = len(usernames)
+      anonymous_name = self.usernames[username]
       row = [anonymous_name, moment.dataset.dataset_id, moment.line.starttime, moment.line.speaker, moment.line.text, moment.direction, agree_cnt, moment.reason, moment.possible_comment, moment.created_at]
       writer.writerow(row)
 

@@ -67,6 +67,29 @@ class MomentViewSet(viewsets.ModelViewSet):
     return response
 
   @action(detail = False, methods=['get'])
+  def export_csv_anonymized(self, request):
+    dataset_id = request.query_params['dataset']
+    dataset = get_object_or_404(Dataset, dataset_id = dataset_id)
+    response = HttpResponse(content_type="text/csv")
+    response['Content-Disposition'] = 'attachment; filename=%s-moments.csv' % dataset_id
+    writer = csv.writer(response)
+
+    headers = ['user_id', 'dataset', 'timestamp', 'speaker', 'line', 'direction', 'agree_cnt', 'exact_cnt', 'reason', 'possible_comment', 'created_at']
+    usernames = {}
+    writer.writerow(headers)
+
+    for moment in Moment.objects.filter(dataset = dataset, author__is_active = True):
+      agree_cnt = Moment.objects.filter(dataset = dataset, line = moment.line, direction = moment.direction, author__is_active = True, created_at__lt = moment.created_at).count()
+      username = moment.author.username.split('-')[0]
+      if username not in usernames:
+        usernames[username] = len(usernames)
+      anonymous_name = usernames[username]
+      row = [anonymous_name, moment.dataset.dataset_id, moment.line.starttime, moment.line.speaker, moment.line.text, moment.direction, agree_cnt, moment.reason, moment.possible_comment, moment.created_at]
+      writer.writerow(row)
+
+    return response
+
+  @action(detail = False, methods=['get'])
   def export_stats(self, request):
     datasets = Dataset.objects.all().order_by('dataset_id')
 
